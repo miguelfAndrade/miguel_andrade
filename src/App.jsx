@@ -10,7 +10,7 @@ import Languages from './sections/Languages';
 import Studies from './sections/Studies';
 import Skills from './sections/Skills';
 
-import img from './assets/logo192.png';
+import img from './assets/Perfil_cc.jpg';
 
 const axios = require('axios');
 
@@ -43,11 +43,25 @@ function App() {
     console.log(error);
 });
 
+
 const [isActive, setActive] = useState(0);
+const [activeStyle, setActiveStyle] = useState([
+  "active",
+  "item",
+  "item",
+  "item",
+  "item",
+  "item",
+  "item"
+])
 
 const handleClick = (number) => {
+  let newStyles = activeStyle;
   if(number !== isActive)
   {
+    newStyles[isActive] = 'item'
+    newStyles[number] = 'active'
+    setActiveStyle(newStyles);
     setActive(number);
   }
 };
@@ -61,25 +75,25 @@ const handleClick = (number) => {
   // })
 
   const pages = [
-  <About data={dummyData} img={img}/>,
-  <Experience />,
-  <Skills />,
-  <Studies />,
-  <Languages />,
-  <Hobbies />,
-  <Contacts />  
+    <About data={dummyData} img={img}/>,
+    <Experience />,
+    <Skills />,
+    <Studies />,
+    <Languages />,
+    <Hobbies />,
+    <Contacts />  
 ]
 
   const menu =  <>
             <div className="menu">
                 <ul className="menu-list">
-                  <li className="item" onClick={handleClick.bind(this, 0)}>{dummyMenu.about}</li>
-                  <li className="item" onClick={handleClick.bind(this, 1)}>{dummyMenu.experience}</li>
-                  <li className="item" onClick={handleClick.bind(this, 2)}>{dummyMenu.studies}</li>
-                  <li className="item" onClick={handleClick.bind(this, 3)}>{dummyMenu.skills}</li>
-                  <li className="item" onClick={handleClick.bind(this, 4)}>{dummyMenu.languages}</li>
-                  <li className="item" onClick={handleClick.bind(this, 5)}>{dummyMenu.hobbies}</li>
-                  <li className="item" onClick={handleClick.bind(this, 6)}>{dummyMenu.contacts}</li>
+                  <li className={activeStyle[0]} onClick={handleClick.bind(this, 0)}>{dummyMenu.about}</li>
+                  <li className={activeStyle[1]} onClick={handleClick.bind(this, 1)}>{dummyMenu.experience}</li>
+                  <li className={activeStyle[2]} onClick={handleClick.bind(this, 2)}>{dummyMenu.studies}</li>
+                  <li className={activeStyle[3]} onClick={handleClick.bind(this, 3)}>{dummyMenu.skills}</li>
+                  <li className={activeStyle[4]} onClick={handleClick.bind(this, 4)}>{dummyMenu.languages}</li>
+                  <li className={activeStyle[5]} onClick={handleClick.bind(this, 5)}>{dummyMenu.hobbies}</li>
+                  <li className={activeStyle[6]} onClick={handleClick.bind(this, 6)}>{dummyMenu.contacts}</li>
                 </ul>
             </div>
         </>;
@@ -94,7 +108,9 @@ const handleClick = (number) => {
               <div className="header"> 
                 <h1 className="main-title"> MIGUEL ANDRADE </h1>
               </div>
-              {pages[isActive]}
+              <div className="pages">
+                {pages[isActive]}
+              </div>
           </div>
     </div>
   </>

@@ -1,5 +1,4 @@
 import { React, Component } from 'react';
-// import {Element} from 'react-scroll';
 
 class About extends Component {
     constructor(props) {

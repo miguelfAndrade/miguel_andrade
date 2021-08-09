@@ -11,7 +11,7 @@ class Contacts extends Component {
     render() {
         return(
             <>
-                <div id="contacts" className="section">
+                <div className="section">
                         Contacts
                 </div>
             </>
