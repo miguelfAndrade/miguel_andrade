@@ -1,6 +1,6 @@
 import './styles/App.css';
-import {React, useState} from 'react';
-// import { useSpring, animated } from 'react-spring'
+import {React, useState, useEffect} from 'react';
+import { motion, useAnimation } from "framer-motion"
 
 import About from './sections/About';
 import Contacts from './sections/Contacts';
@@ -44,6 +44,7 @@ function App() {
 });
 
 
+const [mobileMenu, setMobileMenu] = useState(false);
 const [isActive, setActive] = useState(0);
 const [activeStyle, setActiveStyle] = useState([
   "active",
@@ -53,7 +54,9 @@ const [activeStyle, setActiveStyle] = useState([
   "item",
   "item",
   "item"
-])
+]);
+
+const showPages = useAnimation();
 
 const handleClick = (number) => {
   let newStyles = activeStyle;
@@ -63,40 +66,62 @@ const handleClick = (number) => {
     newStyles[number] = 'active'
     setActiveStyle(newStyles);
     setActive(number);
+
+    showPages.start({ opacity: [0,1], transition: { duration: 1 } });
   }
 };
-  // const props = useSpring({
-  // to: { opacity: 1 },
-  // from: { opacity: 0 },
-  // delay: 500,
-  // config: {duration: 500},
-  // // config: config.molasses,
-  // // onRest: () => set(!flip),
-  // })
+
+const showMobileMenu = () => {
+  setMobileMenu(!mobileMenu);
+}
+
+const variants = {
+  open: { height: 'auto',
+    transition: {
+      duration: 1,
+      staggerChildren: 0.2
+    } 
+  },
+  closed: { height: 0 },
+}
+
+const rotateArrow = {
+  from: { rotate: 45 },
+  to: {rotate: -135 }
+}
+
+const showMenu = {
+  open: { opacity: 1 },
+  closed: { opacity: 0 },
+}
 
   const pages = [
     <About data={dummyData} img={img}/>,
     <Experience />,
-    <Skills />,
     <Studies />,
+    <Skills />,
     <Languages />,
     <Hobbies />,
     <Contacts />  
 ]
 
   const menu =  <>
-            <div className="menu">
-                <ul className="menu-list">
-                  <li className={activeStyle[0]} onClick={handleClick.bind(this, 0)}>{dummyMenu.about}</li>
-                  <li className={activeStyle[1]} onClick={handleClick.bind(this, 1)}>{dummyMenu.experience}</li>
-                  <li className={activeStyle[2]} onClick={handleClick.bind(this, 2)}>{dummyMenu.studies}</li>
-                  <li className={activeStyle[3]} onClick={handleClick.bind(this, 3)}>{dummyMenu.skills}</li>
-                  <li className={activeStyle[4]} onClick={handleClick.bind(this, 4)}>{dummyMenu.languages}</li>
-                  <li className={activeStyle[5]} onClick={handleClick.bind(this, 5)}>{dummyMenu.hobbies}</li>
-                  <li className={activeStyle[6]} onClick={handleClick.bind(this, 6)}>{dummyMenu.contacts}</li>
-                </ul>
-            </div>
+            <motion.div className="menu">
+                <motion.ul className="menu-list">
+                  <motion.li variants={showMenu} className={activeStyle[0]} onClick={handleClick.bind(this, 0)}>{dummyMenu.about}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[1]} onClick={handleClick.bind(this, 1)}>{dummyMenu.experience}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[2]} onClick={handleClick.bind(this, 2)}>{dummyMenu.studies}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[3]} onClick={handleClick.bind(this, 3)}>{dummyMenu.skills}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[4]} onClick={handleClick.bind(this, 4)}>{dummyMenu.languages}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[5]} onClick={handleClick.bind(this, 5)}>{dummyMenu.hobbies}</motion.li>
+                  <motion.li variants={showMenu} className={activeStyle[6]} onClick={handleClick.bind(this, 6)}>{dummyMenu.contacts}</motion.li>
+                </motion.ul>
+            </motion.div>
         </>;
+
+useEffect(() => {
+  showPages.start({ opacity: [0,1], transition: { duration: 1, delay: 0.5 } })
+}, [showPages])
 
   return (
     <>
@@ -107,10 +132,27 @@ const handleClick = (number) => {
               </div>
               <div className="header"> 
                 <h1 className="main-title"> MIGUEL ANDRADE </h1>
+                <motion.div 
+                  initial="closed"
+                  animate={mobileMenu ? "open" : "closed"} 
+                  variants={variants}
+                  transition={{ duration: 1 }}
+                >
+                  {menu}
+                </motion.div>
+                <motion.div 
+                  initial="from"
+                  animate={mobileMenu ? "to" : "from"} 
+                  variants={rotateArrow}
+                  transition={{ duration: 0.5 }}
+                  className="button-mobile" onClick={showMobileMenu}
+                />
               </div>
-              <div className="pages">
+              <motion.div 
+              animate={showPages}
+              className="pages">
                 {pages[isActive]}
-              </div>
+              </motion.div>
           </div>
     </div>
   </>
