@@ -2,3 +2,46 @@ body {
     text-align: center;
 }
 
+#img-perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    border-radius: 50%;
+}
+
+.main-body {
+    display: flex;
+}
+
+.main-info {
+    flex: 1;
+}
+
+.section {
+    display: none;
+    /* visibility: hidden; */
+}
+
+.menu-list {
+    list-style: none;
+    position: sticky;
+  }
+
+.main-menu {
+    /* color: blue; */
+    /* padding-top: 10%; */
+    text-align: right;
+}
+
+.main-menu li {
+    /* display: inline-block; */
+    /* display: flex; */
+    margin-top: 10%;
+    align-items: center;
+}
+
+.main-menu li:hover {
+    /* color: blue; */
+    cursor: pointer;
+}
