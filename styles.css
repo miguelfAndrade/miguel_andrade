@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    color: black;
 }
 
 #img-perfil {
@@ -32,6 +33,7 @@ body {
     /* color: blue; */
     /* padding-top: 10%; */
     text-align: right;
+    transform: translate(-15px, 0px);
 }
 
 .main-menu li {
@@ -39,6 +41,23 @@ body {
     /* display: flex; */
     margin-top: 10%;
     align-items: center;
+}
+
+.list-element {
+    color: #AAAAAA;
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-style: solid;
+    border-color: #AAAAAA;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    /* margin-right: 20px; */
+    transform: translate(0px, 20%);
 }
 
 .main-menu li:hover {

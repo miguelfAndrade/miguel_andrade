@@ -16,6 +16,7 @@ let menuList = document.getElementById('menu-list');
 let menuListHeight = menuList.clientHeight;
 
 let allSections = document.getElementsByClassName('section');
+let allListElements = document.getElementsByClassName('list-element');
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -26,17 +27,23 @@ function menuListCenterPosition(height) {
 }
 
 function resetDisplaySections() {
-    console.log(allSections);
+    // console.log(allSections);
     for(i=0; i<allSections.length; i++) {
         allSections[i].style.display = 'none';
+        allListElements[i].style.color = '#AAAAAA';
+        allListElements[i].firstElementChild.style = "background-color: white;";
     }
 }
 
 
 window.onload = function() {
     aboutMeSection.style.display = 'inherit';
+    aboutMeSectionList.style.color = '#5B5B5B';
+    aboutMeSectionList.firstElementChild.style = "background-color: #AAAAAA;";
     menuListCenterPosition(window.innerHeight);
-    document.getElementsByClassName('section')[0].style.height = window.innerHeight + 'px';
+    for(i=0; i<allSections.length; i++) {
+        document.getElementsByClassName('section')[i].style.height = window.innerHeight + 'px';
+    }
     // console.log(window.innerHeight);
 }
 
@@ -49,29 +56,41 @@ window.onresize = function() {
 aboutMeSectionList.onclick = () => {
     resetDisplaySections();
     aboutMeSection.style.display = 'inherit';
+    aboutMeSectionList.style.color = '#5B5B5B';
+    aboutMeSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
 studiesSectionList.onclick = () => {
     resetDisplaySections();
     studiesSection.style.display = 'inherit';
+    studiesSectionList.style.color = '#5B5B5B';
+    studiesSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
 experienceSectionList.onclick = () => {
     resetDisplaySections();
     experienceSection.style.display = 'inherit';
+    experienceSectionList.style.color = '#5B5B5B';
+    experienceSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
 skillsSectionList.onclick = () => {
     resetDisplaySections();
     skillsSection.style.display = 'inherit';
+    skillsSectionList.style.color = '#5B5B5B';
+    skillsSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
 languagesSectionList.onclick = () => {
     resetDisplaySections();
     languagesSection.style.display = 'inherit';
+    languagesSectionList.style.color = '#5B5B5B';
+    languagesSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
 contactsSectionList.onclick = () => {
     resetDisplaySections();
     contactsSection.style.display = 'inherit';
+    contactsSectionList.style.color = '#5B5B5B';
+    contactsSectionList.firstElementChild.style = "background-color: #AAAAAA;";
 }
