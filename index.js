@@ -1,35 +1,15 @@
-let aboutMeSection = document.getElementById('about-me');
-let studiesSection = document.getElementById('studies');
-let experienceSection = document.getElementById('experience');
-let skillsSection = document.getElementById('skills');
-let languagesSection = document.getElementById('languages');
-let contactsSection = document.getElementById('contacts');
-
-let aboutMeSectionList = document.getElementById('about-me-list');
-let studiesSectionList = document.getElementById('studies-list');
-let experienceSectionList = document.getElementById('experience-list');
-let skillsSectionList = document.getElementById('skills-list');
-let languagesSectionList = document.getElementById('languages-list');
-let contactsSectionList = document.getElementById('contacts-list');
-
-let menuList = document.getElementById('menu-list');
-let menuListHeight = menuList.clientHeight;
-
 let allSections = document.getElementsByClassName('section');
 let allListElements = document.getElementsByClassName('list-element');
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 
-function menuListCenterPosition(height) {
-    let newPosY = (height/2) - (menuListHeight/2);
-    menuList.style.top = newPosY + 'px';
-}
+let sectionClicked = "about-me";
 
-function resetDisplaySections() {
-    // console.log(allSections);
+
+function resetDisplaySections(value) {
     for(i=0; i<allSections.length; i++) {
-        allSections[i].style.display = 'none';
+        allSections[i].style.display = value;
         allListElements[i].style.color = '#AAAAAA';
         allListElements[i].firstElementChild.style = "background-color: white;";
     }
@@ -37,60 +17,48 @@ function resetDisplaySections() {
 
 
 window.onload = function() {
-    aboutMeSection.style.display = 'inherit';
-    aboutMeSectionList.style.color = '#5B5B5B';
-    aboutMeSectionList.firstElementChild.style = "background-color: #AAAAAA;";
-    menuListCenterPosition(window.innerHeight);
+    allSections[0].style.display = 'inherit';
+    allListElements[0].style.color = '#5B5B5B';
+    allListElements[0].firstElementChild.style = "background-color: #AAAAAA;";
     for(i=0; i<allSections.length; i++) {
         document.getElementsByClassName('section')[i].style.height = window.innerHeight + 'px';
     }
-    // console.log(window.innerHeight);
 }
 
 window.onresize = function() {
-    menuListCenterPosition(window.innerHeight);
-    // console.log(window.innerHeight);
+    if(window.innerWidth <= 900) {
+        resetDisplaySections('inherit');
+    }
+    else {
+        resetDisplaySections('none');
+        allSections[0].style.display = 'inherit';
+        allListElements[0].style.color = '#5B5B5B';
+        allListElements[0].firstElementChild.style = "background-color: #AAAAAA;";
+    }
 };
 
-
-aboutMeSectionList.onclick = () => {
-    resetDisplaySections();
-    aboutMeSection.style.display = 'inherit';
-    aboutMeSectionList.style.color = '#5B5B5B';
-    aboutMeSectionList.firstElementChild.style = "background-color: #AAAAAA;";
+function cursorClicks(id) {
+    sectionClicked = id;
+    resetDisplaySections('none');
+    elem = document.getElementById(id);
+    elemList = document.getElementById(id + '-list');
+    elem.style.display = 'inherit';
+    elemList.style.color = '#5B5B5B';
+    elemList.firstElementChild.style = "background-color: #AAAAAA;";
 }
 
-studiesSectionList.onclick = () => {
-    resetDisplaySections();
-    studiesSection.style.display = 'inherit';
-    studiesSectionList.style.color = '#5B5B5B';
-    studiesSectionList.firstElementChild.style = "background-color: #AAAAAA;";
+function cursorEnters(id) {
+    if(sectionClicked !== id) {
+        elemList = document.getElementById(id + '-list');
+        elemList.style.color = '#5B5B5B';
+        elemList.firstElementChild.style = "background-color: #AAAAAA;";
+    }
 }
 
-experienceSectionList.onclick = () => {
-    resetDisplaySections();
-    experienceSection.style.display = 'inherit';
-    experienceSectionList.style.color = '#5B5B5B';
-    experienceSectionList.firstElementChild.style = "background-color: #AAAAAA;";
-}
-
-skillsSectionList.onclick = () => {
-    resetDisplaySections();
-    skillsSection.style.display = 'inherit';
-    skillsSectionList.style.color = '#5B5B5B';
-    skillsSectionList.firstElementChild.style = "background-color: #AAAAAA;";
-}
-
-languagesSectionList.onclick = () => {
-    resetDisplaySections();
-    languagesSection.style.display = 'inherit';
-    languagesSectionList.style.color = '#5B5B5B';
-    languagesSectionList.firstElementChild.style = "background-color: #AAAAAA;";
-}
-
-contactsSectionList.onclick = () => {
-    resetDisplaySections();
-    contactsSection.style.display = 'inherit';
-    contactsSectionList.style.color = '#5B5B5B';
-    contactsSectionList.firstElementChild.style = "background-color: #AAAAAA;";
+function cursorLeaves(id) {
+    if(sectionClicked !== id) {
+        elemList = document.getElementById(id + '-list');
+        elemList.style.color = '#AAAAAA';
+        elemList.firstElementChild.style = "background-color: white;";
+    }
 }
