@@ -1,7 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     text-align: center;
     color: black;
     font-family: 'Prompt', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 #img-perfil {
@@ -14,34 +22,33 @@ body {
 
 .main-info {
     position: relative;
+    /* overflow-y: scroll; */
+    scroll-snap-type: y mandatory;
 }
 
-/* .main-info h1 {
-    position: sticky;
-} */
-
-.section {
-    display: none;
+.main-info .section {
+    scroll-snap-align: start;
 }
 
 .section h2 {
     padding-top: 3%;
 }
 
-
 .main-menu {
     position: absolute;
     top: 0;
-    right: 0.5%;
+    /* right: 0.5%; */
+    margin-left: 93.5%;
     text-align: right;
     height: 100%;
 }
 
 .menu-list {
     list-style: none;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    position: fixed;
     top: 50%;
+    z-index: 2;
 }
 
 .list-element {
@@ -52,7 +59,7 @@ body {
 .dot {
     height: 13px;
     width: 13px;
-    background-color: white;
+    /* background-color: white; */
     border-style: solid;
     border-color: #AAAAAA;
     border-radius: 50%;
@@ -62,21 +69,39 @@ body {
     transform: translate(0px, 20%);
 }
 
-.list-element:hover {
-    cursor: pointer;
+.section-active {
+    color: #5B5B5B;
+    font-weight: bold;
 }
 
-/* .list-element:hover {
+.dot-active {
+    background-color: #AAAAAA;
+}
+
+.section-inactive{
+    color: #AAAAAA;
+    font-weight: unset;
+}
+
+.dot-inactive {
+    background-color: white;
+}
+
+.list-element:hover {
     color: #707070;
     cursor: pointer;
 }
 
 .list-element:hover .dot {
     background-color: #AAAAAA;
-} */
+}
 
 
 @media only screen and (max-width: 900px) {
+    /* html {
+        scroll-behavior: smooth;
+    } */
+
     .main-menu {
         display: none;
         height: auto;

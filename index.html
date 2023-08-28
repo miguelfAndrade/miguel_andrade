@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet"> 
     <title>Miguel Andrade</title>
 </head>
-<body>
+<body id="about" >
     <div class="main-info">
         <h1 class="main-title">Miguel Andrade</h1>
         <div id="about-me" class="section">
@@ -81,12 +81,19 @@
         </div>
         <div id="main-menu" class="main-menu">
             <ul id="menu-list" class="menu-list">
-                <li id="about-me-list" class="list-element" onmouseenter="cursorEnters('about-me')" onmouseleave="cursorLeaves('about-me')" onclick="cursorClicks('about-me')">About Me<span class="dot"></span></li>
-                <li id="experience-list" class="list-element" class="list-element" onmouseenter="cursorEnters('experience')" onmouseleave="cursorLeaves('experience')" onclick="cursorClicks('experience')">Experience<span class="dot"></span></li>
-                <li id="studies-list" class="list-element" class="list-element" onmouseenter="cursorEnters('studies')" onmouseleave="cursorLeaves('studies')" onclick="cursorClicks('studies')">Studies<span class="dot"></span></li>
-                <li id="skills-list" class="list-element" class="list-element" onmouseenter="cursorEnters('skills')" onmouseleave="cursorLeaves('skills')" onclick="cursorClicks('skills')">Skills<span class="dot"></span></li>
-                <li id="languages-list" class="list-element" class="list-element" onmouseenter="cursorEnters('languages')" onmouseleave="cursorLeaves('languages')" onclick="cursorClicks('languages')">Languages<span class="dot"></span></li>
-                <li id="contacts-list" class="list-element" class="list-element" onmouseenter="cursorEnters('contacts')" onmouseleave="cursorLeaves('contacts')" onclick="cursorClicks('contacts')">Contacts<span class="dot"></span></li>
+                <!-- <li id="about-me-list" class="list-element" onmouseenter="cursorEnters('about-me')" onmouseleave="cursorLeaves('about-me')" onclick="cursorClicks('about-me')">About Me<span class="dot"></span></li>
+                <li id="experience-list" class="list-element" onmouseenter="cursorEnters('experience')" onmouseleave="cursorLeaves('experience')" onclick="cursorClicks('experience')">Experience<span class="dot"></span></li>
+                <li id="studies-list" class="list-element" onmouseenter="cursorEnters('studies')" onmouseleave="cursorLeaves('studies')" onclick="cursorClicks('studies')">Studies<span class="dot"></span></li>
+                <li id="skills-list" class="list-element" onmouseenter="cursorEnters('skills')" onmouseleave="cursorLeaves('skills')" onclick="cursorClicks('skills')">Skills<span class="dot"></span></li>
+                <li id="languages-list" class="list-element" onmouseenter="cursorEnters('languages')" onmouseleave="cursorLeaves('languages')" onclick="cursorClicks('languages')">Languages<span class="dot"></span></li>
+                <li id="contacts-list" class="list-element" onmouseenter="cursorEnters('contacts')" onmouseleave="cursorLeaves('contacts')" onclick="cursorClicks('contacts')">Contacts<span class="dot"></span></li>
+                 -->
+                <a href="#about"><li id="about-me-list" class="list-element" onclick="cursorClicks('about-me')">About Me<span class="dot"></span></li></a>
+                <a href="#experience"><li id="experience-list" class="list-element" onclick="cursorClicks('experience')">Experience<span class="dot"></span></li></a>
+                <a href="#studies"><li id="studies-list" class="list-element" onclick="cursorClicks('studies')">Studies<span class="dot"></span></li></a>
+                <a href="#skills"><li id="skills-list" class="list-element" onclick="cursorClicks('skills')">Skills<span class="dot"></span></li></a>
+                <a href="#languages"><li id="languages-list" class="list-element" onclick="cursorClicks('languages')">Languages<span class="dot"></span></li></a>
+                <a href="#contacts"><li id="contacts-list" class="list-element" onclick="cursorClicks('contacts')">Contacts<span class="dot"></span></li></a>
             </ul>
         </div>
     </div>
