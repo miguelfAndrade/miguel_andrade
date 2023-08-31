@@ -62,8 +62,9 @@ window.onscroll = function() {
     
     scrollVar = document.documentElement.scrollTop / (document.body.offsetHeight - window.innerHeight);
     
-    console.log("Scroll Value: " + scrollVar);
-    console.log("Section Division Value: " + sectionDivision);
+    // console.log("Scroll Value: " + scrollVar);
+    // console.log("Section Division Value: " + sectionDivision);
+    
     if(window.innerWidth <= 900) 
     {
         resetDisplaySections('inherit');

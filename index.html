@@ -16,43 +16,61 @@
         <div id="about-me" class="section">
             <img id="img-perfil" src="img/Perfil_cc.jpg"/>
             <h2>Welcome to my page</h2>
-            <p>Welcome to my personal website. Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time. Enjoy!</p>
+            <p>Welcome to my personal website! My name is Miguel Andrade, I'm 27 years old and I'm currently living in Vila das Aves, a small town located in the north of Portugal, about 30Km from Porto.</p>
+            <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
         </div>
         <div id="experience" class="section">
             <h2>Experience</h2>
             <div class="info-section">
-                <h3>VILT - Portugal</h3>
                 <h3>Junior Consultant</h3>
-                <h3>Braga, Portugal</h3>
+                <h4>VILT - Portugal</h4>
+                <h5>Braga, Portugal</h5>
             </div>
             <div class="info-section">
-                <h3>Pingo Doce, Jerónimo Martins Group</h3>
                 <h3>Cashier, Weekend Part-Time</h3>
-                <h3>Infias, Vizela (Portugal)</h3>
+                <h4>Pingo Doce, Jerónimo Martins Group</h4>
+                <h5>Infias, Vizela (Portugal)</h5>
             </div>
         </div>
         <div id="studies" class="section">
             <h2>Studies</h2>
             <div class="info-section">
-                <h3>2021 - 2023</h3>
                 <h3>Masters in Informatics and Computing Engineering</h3>
-                <h3>Faculty of Engineering of University of Porto, Porto (Portugal)</h3>
+                <h4>Faculty of Engineering of University of Porto, Porto (Portugal)</h4>
+                <p>2021 - 2023</p>
             </div>
             <div class="info-section">
-                <h3>2017 - 2021</h3>
                 <h3>Degree in Science of Engineering - Informatics and Computing Engineering</h3>
-                <h3>Faculty of Engineering of University of Porto, Porto (Portugal)</h3>
+                <h4>Faculty of Engineering of University of Porto, Porto (Portugal)</h4>
+                <p>2017 - 2021</p>
             </div>
             <div class="info-section">
-                <h3>2014 - 2017</h3>
                 <h3>Degree in Computer Graphics Engineering and Multimedia</h3>
-                <h3>Polytechnic Institute of Viana do Castelo, Viana do Castelo (Portugal)</h3>
+                <h4>Polytechnic Institute of Viana do Castelo, Viana do Castelo (Portugal)</h4>
+                <p>2014 - 2017</p>
             </div>
         </div>
         <div id="skills" class="section">
             <h2>Skills</h2>
             <div class="info-section">
-                <p></p>
+                <table class="single-skill">
+                    <tr>
+                        <td class="skill-title"><h2>JavaScript</h2></td>
+                        <td class="skill-bar"><div class="progress-bar"><div id="js-bar" class="actual-progress"></div></div></td>
+                    </tr>
+                </table>
+                <table class="single-skill">
+                    <tr>
+                        <td class="skill-title"><h2>Java</h2></td>
+                        <td class="skill-bar"><div class="progress-bar"><div id="java-bar" class="actual-progress"></div></div></td>
+                    </tr>
+                </table>
+                <table class="single-skill">
+                    <tr>
+                        <td class="skill-title"><h2>C/C++</h2></td>
+                        <td class="skill-bar"><div class="progress-bar"><div id="cpp-bar" class="actual-progress"></div></div></td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div id="languages" class="section">
@@ -69,12 +87,13 @@
         <div id="projects" class="section">
             <h2>Personal Projects</h2>
             <div class="info-section">
-                <h3>Mail</h3>
-                <p></p>
-                <h3>LinkedIn</h3>
-                <p></p>
-                <h3>GitHub</h3>
-                <p></p>
+                <h3>This Website Project</h3>
+                <p>The title is self-explanatory, this is the GitHub repository of this site.</p>
+                <h3>My Masters Thesis</h3>
+                <p>The project of my masters thesis, Development of a 3D visualisation system for a robotic simulator. The idea here was to process a pointcloud from a robot and generate a 3D geometry from that same pointcloud. We can visualize and interact with this geometry through a graphical interface in the browser.</p>
+                <p>I've used Gazebo and C++ to simulate a LiDAR sensor, Open3D to generate the 3D geometry and THREE.js to visualize the 3D object in the browser</p>
+                <h3>Mancala Game with AI</h3>
+                <p>This game was a project in university which the objective was to create the mancala game and play it against an AI. This project is implemented in Python. In the future I'm thinking of adding an UI.</p>
             </div>
         </div>
         <div id="main-menu" class="main-menu">
@@ -88,9 +107,9 @@
             </ul>
         </div>
         <div id="contacts-icons" class="contacts-icons">
-            <li><span>GitHub</span></li>
-            <li><span>Mail</span></li>
-            <li><span>LinkedIn</span></li>
+            <a href="https://github.com/miguelfAndrade" target="_blank"><li>GitHub</li></a>
+            <a href="mailto:pro.mandrade@gmail.com" target="_blank"><li>Mail</li></a>
+            <a href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank"><li>LinkedIn</li></a>
             <a class="contacts-button">click</a>
         </div>
     </div>
