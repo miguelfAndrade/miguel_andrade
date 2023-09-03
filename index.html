@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Miguel Andrade</title>
 </head>
 <body id="about" >
@@ -15,25 +16,27 @@
         <h1 class="main-title">Miguel Andrade</h1>
         <div id="about-me" class="section">
             <img id="img-perfil" src="img/Perfil_cc.jpg"/>
-            <h2>Welcome to my page</h2>
-            <p>Welcome to my personal website! My name is Miguel Andrade, I'm 27 years old and I'm currently living in Vila das Aves, a small town located in the north of Portugal, about 30Km from Porto.</p>
-            <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
+            <h2 class="section-title">Welcome to my page</h2>
+            <div class="info-section">
+                <p>Welcome to my personal website! My name is Miguel Andrade, I'm 27 years old and I'm currently living in Vila das Aves, a small town located in the north of Portugal, about 30Km from Porto.</p>
+                <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
+            </div>
         </div>
         <div id="experience" class="section">
-            <h2>Experience</h2>
+            <h2 class="section-title">Experience</h2>
             <div class="info-section">
                 <h3>Junior Consultant</h3>
                 <h4>VILT - Portugal</h4>
-                <h5>Braga, Portugal</h5>
+                <p>Braga, Portugal</p>
             </div>
             <div class="info-section">
                 <h3>Cashier, Weekend Part-Time</h3>
                 <h4>Pingo Doce, Jerónimo Martins Group</h4>
-                <h5>Infias, Vizela (Portugal)</h5>
+                <p>Infias, Vizela (Portugal)</p>
             </div>
         </div>
         <div id="studies" class="section">
-            <h2>Studies</h2>
+            <h2 class="section-title">Studies</h2>
             <div class="info-section">
                 <h3>Masters in Informatics and Computing Engineering</h3>
                 <h4>Faculty of Engineering of University of Porto, Porto (Portugal)</h4>
@@ -51,30 +54,36 @@
             </div>
         </div>
         <div id="skills" class="section">
-            <h2>Skills</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="info-section">
-                <table class="single-skill">
-                    <tr>
-                        <td class="skill-title"><h2>JavaScript</h2></td>
-                        <td class="skill-bar"><div class="progress-bar"><div id="js-bar" class="actual-progress"></div></div></td>
-                    </tr>
-                </table>
-                <table class="single-skill">
-                    <tr>
-                        <td class="skill-title"><h2>Java</h2></td>
-                        <td class="skill-bar"><div class="progress-bar"><div id="java-bar" class="actual-progress"></div></div></td>
-                    </tr>
-                </table>
-                <table class="single-skill">
-                    <tr>
-                        <td class="skill-title"><h2>C/C++</h2></td>
-                        <td class="skill-bar"><div class="progress-bar"><div id="cpp-bar" class="actual-progress"></div></div></td>
-                    </tr>
-                </table>
+                <div class="single-skill">
+                    <div class="blank-div"></div>
+                    <h2 class="skill-title">JavaScript</h2>
+                    <div class="progress-bar"><div id="js-bar" class="actual-progress"></div></div>
+                    <div class="blank-div"></div>
+                </div>
+                <div class="single-skill">
+                    <div class="blank-div"></div>
+                    <h2 class="skill-title">Java</h2>
+                    <div class="progress-bar"><div id="java-bar" class="actual-progress"></div></div>
+                    <div class="blank-div"></div>
+                </div>
+                <div class="single-skill">
+                    <div class="blank-div"></div>
+                    <h2 class="skill-title">C/C++</h2>
+                    <div class="progress-bar"><div id="cpp-bar" class="actual-progress"></div></div>
+                    <div class="blank-div"></div>
+                </div>
+                <div class="single-skill">
+                    <div class="blank-div"></div>
+                    <h2 class="skill-title">Python</h2>
+                    <div class="progress-bar"><div id="python-bar" class="actual-progress"></div></div>
+                    <div class="blank-div"></div>
+                </div>
             </div>
         </div>
         <div id="languages" class="section">
-            <h2>Languages</h2>
+            <h2 class="section-title">Languages</h2>
             <div class="info-section">
                 <h3>Portuguese</h3>
                 <p>Native</p>
@@ -85,14 +94,14 @@
             </div>
         </div>
         <div id="projects" class="section">
-            <h2>Personal Projects</h2>
+            <h2 class="section-title">Personal Projects</h2>
             <div class="info-section">
-                <h3>This Website Project</h3>
+                <a href="https://github.com/miguelfAndrade/miguel_andrade" target="_blank"><h3>This Website Project <i class="fa fa-external-link-square"></i></h3></i></a>
                 <p>The title is self-explanatory, this is the GitHub repository of this site.</p>
-                <h3>My Masters Thesis</h3>
+                <a href="https://github.com/miguelfAndrade/web_interface_open3d" target="_blank"><h3>My Masters Thesis <i class="fa fa-external-link-square"></i></h3></i></a>
                 <p>The project of my masters thesis, Development of a 3D visualisation system for a robotic simulator. The idea here was to process a pointcloud from a robot and generate a 3D geometry from that same pointcloud. We can visualize and interact with this geometry through a graphical interface in the browser.</p>
                 <p>I've used Gazebo and C++ to simulate a LiDAR sensor, Open3D to generate the 3D geometry and THREE.js to visualize the 3D object in the browser</p>
-                <h3>Mancala Game with AI</h3>
+                <a href="https://github.com/miguelfAndrade/mancala_game_iart" target="_blank"><h3>Mancala Game with AI <i class="fa fa-external-link-square"></i></h3></i></a>
                 <p>This game was a project in university which the objective was to create the mancala game and play it against an AI. This project is implemented in Python. In the future I'm thinking of adding an UI.</p>
             </div>
         </div>
@@ -107,10 +116,12 @@
             </ul>
         </div>
         <div id="contacts-icons" class="contacts-icons">
-            <a href="https://github.com/miguelfAndrade" target="_blank"><li>GitHub</li></a>
-            <a href="mailto:pro.mandrade@gmail.com" target="_blank"><li>Mail</li></a>
-            <a href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank"><li>LinkedIn</li></a>
-            <a class="contacts-button">click</a>
+            <div id="icons-list" class="icons-list">
+                <a id="github-link" href="https://github.com/miguelfAndrade" target="_blank"><li><i class="fa fa-github"></i></li></a>
+                <a id="mail-link" href="mailto:pro.mandrade@gmail.com" target="_blank"><li><i class="fa fa-envelope"></i></li></a>
+                <a id="linkedin-link" href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank"><li><i class="fa fa-linkedin-square"></i></li></a>
+            </div>
+            <a onclick="hideSocialsIcons('icons-list')" id="contacts-button" class="contacts-button"><i class="fa fa-ellipsis-v"></i></a>
         </div>
     </div>
     <script src="index.js"></script>

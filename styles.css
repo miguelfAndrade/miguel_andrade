@@ -1,4 +1,9 @@
 :root {
+    --color-font: black;
+    --color-h4: #707070;
+    --font-size: 20px;
+    --font-size-menu: 15px;
+
     --color-dot-active: #AAAAAA;
     --color-dot-inactive: white;
     --color-dot-hover-active: #AAAAAA;
@@ -6,9 +11,21 @@
     --color-list-inactive: #AAAAAA;
     --color-list-hover-active: #707070;
 
-    --color-section-title-mobile: white;
-    
     --color-progress-bar: black;
+    --color-icons: black;
+    
+    --font-size-icons: 25px;
+    --font-size-icons-hover: 30px;
+    --font-size-icons-git-linkedin: 30px;
+    --font-size-icons-git-linkedin-hover: 35px;
+    
+    
+    --font-size-mobile: 15px;
+    --font-size-icons-mobile: 20px;
+    --font-size-icons-git-linkedin-mobile: 25px;
+    --color-section-title-mobile: white;
+    --color-section-title-gradient-mobile: #ebebeb;
+    
   }
 
 html {
@@ -17,12 +34,27 @@ html {
 
 body {
     text-align: center;
-    color: black;
+    color: var(--color-font);
     font-family: 'Prompt', sans-serif;
+    font-size: var(--font-size);
     min-height: var(--body-height);
+    width: 100vw;
+}
+
+h4 {
+    color: var(--color-h4);
 }
 
 a {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
     text-decoration: none;
 }
 
@@ -35,7 +67,6 @@ a {
 }
 
 .main-info {
-    /* position: relative; */
     position: fixed;
     width: 100%;
 }
@@ -51,47 +82,40 @@ a {
     animation-fill-mode: both;
 }
 
-.section h2 {
+.section-title {
     padding-top: 3%;
 }
 
 .main-menu {
+    font-size: var(--font-size-menu);
     position: fixed;
     top: 40%;
-    /* right: 0.5%; */
-    /* margin-left: 93.5%; */
     right: 20px;
     text-align: right;
-    /* height: 100%; */
 }
 
 .menu-list {
     list-style: none;
-    /* top: 50%;
-    z-index: 2; */
 }
 
 .list-element {
     margin-top: 5%;
-    color: #AAAAAA;
+    color: var(--color-list-inactive);
 }
 
 .dot {
     height: 13px;
     width: 13px;
-    /* background-color: white; */
     border-style: solid;
     border-color: var(--color-dot-active);
     border-radius: 50%;
     display: inline-block;
     margin-left: 10px;
-    /* margin-right: 20px; */
     transform: translate(0px, 20%);
 }
 
 .section-active {
     color: black;
-    /* font-weight: bold; */
 }
 
 .dot-active {
@@ -100,7 +124,6 @@ a {
 
 .section-inactive{
     color: var(--color-list-inactive);
-    /* font-weight: unset; */
 }
 
 .dot-inactive {
@@ -119,40 +142,84 @@ a {
 .contacts-icons {
     list-style: none;
     position: fixed;
-    top: 40%;
+    top: 50%;
     left: 20px;
     text-align: left;
 }
+
+.contacts-icons a {
+    color: var(--color-icons);
+    font-size: var(--font-size-icons);
+}
+
+.contacts-icons a:first-child {
+    font-size: var(--font-size-icons-git-linkedin);
+}
+
+.contacts-icons a:last-child {
+    font-size: var(--font-size-icons-git-linkedin);
+}
+
+.contacts-icons a:hover {
+    font-size: var(--font-size-icons-hover);
+}
+
+.contacts-icons a:first-child:hover {
+    font-size: var(--font-size-icons-git-linkedin-hover);
+}
+
+.contacts-icons a:last-child:hover {
+    font-size: var(--font-size-icons-git-linkedin-hover);
+}
+
 
 .contacts-button {
     display: none;
 }
 
+.info-section {
+    margin-top: 3%;
+}
 
 #skills .info-section {
-    margin-top: 2%;
+    margin-top: 50px;
 }
 
 .single-skill {
-    margin-left: 40%;
+    display: flex;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.blank-div {
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .skill-title {
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 150px;
+    min-width: 125px;
+    height: 100%;
+    align-self: center;
     text-align: right;
-    width: 150px;
 }
 
 .progress-bar {
+    -ms-flex: 1;
+    flex: 1;
     margin-left: 50px;
     height: 20px;
     border-style: solid;
-    border-color: black;
-    width: 250px;
+    border-color: var(--color-progress-bar);
+    max-width: 350px;
+    min-width: 150px;
 }
 
 .actual-progress {
     height: 100%;
-    background-color: black;
+    background-color: var(--color-progress-bar);
 }
 
 #js-bar {
@@ -167,6 +234,134 @@ a {
     width: 65%;
 }
 
+#python-bar {
+    width: 55%;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    body {
+        font-size: var(--font-size-mobile);
+    }
+
+    .main-menu {
+        display: none;
+        height: auto;
+    }
+
+    .main-info{
+        position: relative;
+        width: auto;
+    }
+    
+    .info-section {
+        margin: 3% 30px;
+    }
+
+    .section {
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .section-title {
+        position: -webkit-sticky;
+        position: sticky;
+        padding-top: 4%;
+        padding-bottom: 3%;
+        height: 6vh;
+        top: 0;
+        background-color: var(--color-section-title-mobile);
+        background-image: linear-gradient(var(--color-section-title-mobile), var(--color-section-title-gradient-mobile));
+        /* background-image: linear-gradient(var(--color-section-title-mobile), red); */
+        border-radius: 0 0 30% 30%;
+        /* box-shadow: 0px 10px 20px var(--color-dot-hover-active); */
+    }
+
+    /* .shadow-section-title {
+        box-shadow: 0px 10px 20px var(--color-dot-hover-active);
+    } */
+    
+    .single-skill {
+        display: initial;
+        margin: auto;
+    }
+
+    .skill-title {
+        min-width: none;
+        max-width: none;
+        text-align: center;
+    }
+
+    .blank-div {
+        display: none;
+    }
+        
+    .progress-bar {
+        width: 200px;
+        margin: auto;
+    }
+
+    .contacts-icons {
+        top: auto;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .icon-list-show {
+        display: initial;
+        animation: animate-icons 1s linear;
+    }
+
+    .icon-list-hide {
+        animation: animate-icons 1s linear;
+        animation-direction: reverse;
+        display: none;
+    }
+
+    .contacts-button {
+        display: initial;
+        background-color: var(--color-section-title-mobile);
+    }
+
+    .contacts-icons a {
+        font-size: var(--font-size-icons-mobile);
+    }
+
+    .contacts-icons a:hover {
+        font-size: var(--font-size-icons-mobile);
+    }
+
+    .contacts-icons a:first-child {
+        font-size: var(--font-size-icons-git-linkedin-mobile);
+    }
+    
+    .contacts-icons a:last-child {
+        font-size: var(--font-size-icons-git-linkedin-mobile);
+    }
+
+    .contacts-icons a:first-child:hover {
+        font-size: var(--font-size-icons-git-linkedin-mobile);
+    }
+    
+    .contacts-icons a:last-child:hover {
+        font-size: var(--font-size-icons-git-linkedin-mobile);
+    }
+
+
+    #github-link {
+        animation: animate-icons 1s linear 0s 1;
+    }
+
+    #mail-link {
+        animation: animate-icons 1.5s linear 0s 1 direction fill-mode;
+    }
+
+    #mail-link {
+        animation: animate-icons 2s linear 0s 1 direction fill-mode;
+    }
+}
+
+
 @keyframes translate {
     from {
         opacity: 0;
@@ -178,33 +373,14 @@ a {
     }
 }
 
-@media only screen and (max-width: 900px) {
-    /* html {
-        scroll-behavior: smooth;
-    } */
-
-    .main-menu {
-        display: none;
-        height: auto;
+@keyframes animate-icons {
+    from {
+        opacity: 0;
+        /* transform: translate(0px, var(--social-animations-from)); */
     }
-
-    .main-info{
-        position: relative;
-    }
-    
-    .section {
-        display: inherit;
-    }
-
-    .section h2 {
-        position: sticky;
-        top: 0;
-        padding-top: 3%;
-        background-color: var(--color-section-title-mobile);
-        height: 5%;
-    }
-
-    .contacts-button {
-        display: inherit;
+    to {
+        opacity: 100;
+        /* transform: translate(0px, var(--social-animations-to)); */
     }
 }
+
