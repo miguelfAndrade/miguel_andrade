@@ -1,6 +1,7 @@
 let allSections = document.getElementsByClassName('section');
 let allListElements = document.getElementsByClassName('list-element');
-let allSectionTitles = document.getElementsByClassName('section-title');;
+
+let contactsIcons = document.getElementById('icons-list');
 
 let aboutMeSection = document.getElementById("about-me");
 let experienceSection = document.getElementById("experience");
@@ -25,8 +26,7 @@ let mobileWidth = 1100;
 let hideIcons = true;
 
 window.onload = function() {
-    allSectionTitles = document.getElementsByClassName('section-title');
-    // animationSocials();
+    contactsIcons.setAttribute('hidden', hideIcons);
     document.body.style.setProperty('--body-height', ((allListElements.length * window.innerHeight) + 'px'));
     if(window.innerWidth <= mobileWidth) {
         resetDisplaySections('inherit');
@@ -38,14 +38,13 @@ window.onload = function() {
 }
 
 window.onresize = function() {
-    // animationSocials();
+    // hideSocialsIcons('icons-list');
     if(window.innerWidth <= mobileWidth) {
         resetDisplaySections('inherit');
-        hideSocialsIcons('icons-list');
     }
     else {
         activateSection('about-me');
-        // hideIcons = false;
+        hideIcons = true;
     }
 };
 
@@ -84,16 +83,6 @@ window.onscroll = function(event) {
             activateSection('projects');
         }
     }
-
-    // console.log(allSectionTitles[0].offsetHeight);
-    // for(i=0; i<allSectionTitles.length; i++) {
-    //     if(document.body.offsetHeight >= allSectionTitles[i].offsetHeight) {
-    //         allSectionTitles[i].classList.add('shadow-section-title');
-    //     }
-    //     else {
-    //         allSectionTitles[i].classList.remove('shadow-section-title');
-    //     }
-    // }
 }
 
 function cursorClicks(id) {
@@ -101,7 +90,6 @@ function cursorClicks(id) {
 }
 
 function hideSocialsIcons(iconsListId) {
-    // animationSocials();
     let iconsList = document.getElementById(iconsListId);
     if(hideIcons) {
         iconsList.classList.remove("icon-list-show");
@@ -109,11 +97,10 @@ function hideSocialsIcons(iconsListId) {
     }
     else {
         iconsList.classList.remove("icon-list-hide");
-        // iconsList.classList.remove("animation-icons-hide");
         iconsList.classList.add("icon-list-show");
-        // iconsList.classList.add("animation-icons-show");
     }
     hideIcons = !hideIcons;
+    iconsList.setAttribute('hidden', hideIcons);
 }
 
 
@@ -127,7 +114,6 @@ function activateSection(sectionId) {
     elemList.firstElementChild.classList.add("dot-active");
     // if(sectionId == 'about-me') {
     //     document.documentElement.scrollTop = 0;
-    //     console.log("Entrou!!!");
     // }
     // else if(sectionId == 'experience') {
     //     document.documentElement.scrollTop = (sectionDivision)*(document.body.offsetHeight - window.innerHeight);
@@ -158,10 +144,4 @@ function resetDisplaySections(value) {
     }
 }
 
-// function animationSocials() {
-//     let windowHeight = window.innerHeight;
-//     let socialsHeight = document.getElementById('contacts-icons').clientHeight;
-//     document.body.style.setProperty('--social-animations-from', (windowHeight + socialsHeight) + 'px');
-//     document.body.style.setProperty('--social-animations-to', (windowHeight - socialsHeight) + 'px');
-// }
 

@@ -21,24 +21,22 @@
     
     
     --font-size-mobile: 15px;
-    --font-size-icons-mobile: 20px;
-    --font-size-icons-git-linkedin-mobile: 25px;
+    --font-size-icons-mobile: 25px;
+    --font-size-icons-git-linkedin-mobile: 30px;
     --color-section-title-mobile: white;
     --color-section-title-gradient-mobile: #ebebeb;
     
   }
 
-html {
-    scroll-behavior: smooth;
-}
 
-body {
+#all-content {
     text-align: center;
     color: var(--color-font);
     font-family: 'Prompt', sans-serif;
     font-size: var(--font-size);
     min-height: var(--body-height);
-    width: 100vw;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 h4 {
@@ -62,7 +60,7 @@ a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30vh;
+    width: 15vw;
     border-radius: 50%;
 }
 
@@ -172,6 +170,10 @@ a:active {
     font-size: var(--font-size-icons-git-linkedin-hover);
 }
 
+.icons-list {
+    opacity: 100;
+    display: inherit;
+}
 
 .contacts-button {
     display: none;
@@ -238,10 +240,15 @@ a:active {
     width: 55%;
 }
 
+
 @media only screen and (max-width: 1100px) {
 
-    body {
+    #all-content {
         font-size: var(--font-size-mobile);
+    }
+
+    #img-perfil {
+        width: 40vw;
     }
 
     .main-menu {
@@ -255,7 +262,7 @@ a:active {
     }
     
     .info-section {
-        margin: 3% 30px;
+        margin: 3% 40px;
     }
 
     .section {
@@ -270,16 +277,10 @@ a:active {
         padding-bottom: 3%;
         height: 6vh;
         top: 0;
-        background-color: var(--color-section-title-mobile);
         background-image: linear-gradient(var(--color-section-title-mobile), var(--color-section-title-gradient-mobile));
-        /* background-image: linear-gradient(var(--color-section-title-mobile), red); */
         border-radius: 0 0 30% 30%;
-        /* box-shadow: 0px 10px 20px var(--color-dot-hover-active); */
+        box-shadow: 0px 15px 15px var(--color-dot-active);
     }
-
-    /* .shadow-section-title {
-        box-shadow: 0px 10px 20px var(--color-dot-hover-active);
-    } */
     
     .single-skill {
         display: initial;
@@ -308,19 +309,17 @@ a:active {
     }
 
     .icon-list-show {
-        display: initial;
-        animation: animate-icons 1s linear;
+        display: inherit;
     }
 
     .icon-list-hide {
-        animation: animate-icons 1s linear;
-        animation-direction: reverse;
         display: none;
     }
 
     .contacts-button {
-        display: initial;
-        background-color: var(--color-section-title-mobile);
+        display: inline-block;
+        width: var(--font-size-icons-mobile);
+        /* background-color: var(--color-section-title-mobile); */
     }
 
     .contacts-icons a {
@@ -349,18 +348,29 @@ a:active {
 
 
     #github-link {
+        animation: animate-icons 2s linear 0s 1;
+        animation-play-state: initial;
+        animation-fill-mode: forwards;
+    }
+
+    #mail-link {
+        animation: animate-icons 1.5s linear 0s 1;
+        animation-play-state: initial;
+        animation-fill-mode: forwards;
+    }
+
+    #linkedin-link {
         animation: animate-icons 1s linear 0s 1;
-    }
-
-    #mail-link {
-        animation: animate-icons 1.5s linear 0s 1 direction fill-mode;
-    }
-
-    #mail-link {
-        animation: animate-icons 2s linear 0s 1 direction fill-mode;
+        animation-play-state: initial;
+        animation-fill-mode: forwards;
     }
 }
 
+@media only screen and (max-width: 500px) {
+    #img-perfil {
+        width: 60vw;
+    }
+}
 
 @keyframes translate {
     from {
@@ -376,11 +386,10 @@ a:active {
 @keyframes animate-icons {
     from {
         opacity: 0;
-        /* transform: translate(0px, var(--social-animations-from)); */
     }
     to {
         opacity: 100;
-        /* transform: translate(0px, var(--social-animations-to)); */
     }
 }
+
 
