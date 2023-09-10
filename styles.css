@@ -30,12 +30,6 @@
     
   }
 
-  @font-face {
-    font-family: 'fontawesome-webfont';
-    src: url('fonts/fontawesome-webfont.woff2');
-    font-display: swap;
-  }
-
 #all-content {
     text-align: center;
     color: var(--color-font);
