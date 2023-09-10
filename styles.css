@@ -1,4 +1,6 @@
 :root {
+    --fonts: 'Prompt', Arial, sans-serif;
+
     --color-font: black;
     --color-h4: #707070;
     --font-size: 20px;
@@ -28,11 +30,16 @@
     
   }
 
+  @font-face {
+    font-family: 'fontawesome-webfont';
+    src: url('fonts/fontawesome-webfont.woff2');
+    font-display: swap;
+  }
 
 #all-content {
     text-align: center;
     color: var(--color-font);
-    font-family: 'Prompt', sans-serif;
+    font-family: var(--fonts);
     font-size: var(--font-size);
     min-height: var(--body-height);
     margin-left:auto;
@@ -61,6 +68,7 @@ a:active {
     margin-left: auto;
     margin-right: auto;
     width: 15vw;
+    height: auto;
     border-radius: 50%;
 }
 
