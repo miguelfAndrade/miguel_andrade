@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Miguel Andrade personal website">
+    <meta name="keywords" content="CV, Miguel Andrarde, software developer">
+    <meta name="author" content="Miguel Andrade">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icon.webp">
+
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="index.js" as="script">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
     <title>Miguel Andrade</title>
 </head>
 <body id="all-content">
     <div class="main-info">
         <h1 class="main-title">Miguel Andrade</h1>
         <div id="about-me" class="section">
-            <img id="img-perfil" src="img/Perfil_cc.jpg"/>
+            <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
             <div class="info-section">
                 <p>Welcome to my personal website! My name is Miguel Andrade, I'm 27 years old and I'm currently living in Vila das Aves, a small town located in the north of Portugal, about 30Km from Porto.</p>
@@ -117,9 +126,9 @@
         </div>
         <div id="contacts-icons" class="contacts-icons">
             <div id="icons-list" class="icons-list" hidden="true">
-                <a id="github-link" href="https://github.com/miguelfAndrade" target="_blank"><li><i class="fa fa-github"></i></li></a>
-                <a id="mail-link" href="mailto:pro.mandrade@gmail.com" target="_blank"><li><i class="fa fa-envelope"></i></li></a>
-                <a id="linkedin-link" href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank"><li><i class="fa fa-linkedin-square"></i></li></a>
+                <a id="github-link" href="https://github.com/miguelfAndrade" target="_blank" aria-label="My GitHub page"><li><i class="fa fa-github"></i></li></a>
+                <a id="mail-link" href="mailto:pro.mandrade@gmail.com" target="_blank" aria-label="My email address"><li><i class="fa fa-envelope"></i></li></a>
+                <a id="linkedin-link" href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank" aria-label="My LinkedIn profile"><li><i class="fa fa-linkedin-square"></i></li></a>
             </div>
             <a onclick="hideSocialsIcons('icons-list')" id="contacts-button" class="contacts-button"><i class="fa fa-ellipsis-v"></i></a>
         </div>
