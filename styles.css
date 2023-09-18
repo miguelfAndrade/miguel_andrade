@@ -5,6 +5,7 @@
     --color-h4: #707070;
     --font-size: 20px;
     --font-size-menu: 15px;
+    --font-size-close-button: 50px;
 
     --color-dot-active: #AAAAAA;
     --color-dot-inactive: white;
@@ -38,6 +39,7 @@
     min-height: var(--body-height);
     margin-left:auto;
     margin-right:auto;
+    /* background-image: linear-gradient(180deg, rgb(252, 230, 230) 0%, rgb(255, 255, 255) 100%); */
 }
 
 h4 {
@@ -66,9 +68,44 @@ a:active {
     border-radius: 50%;
 }
 
+.more-info-link:hover {
+    cursor: pointer;
+}
+
+.more-info {
+    visibility: hidden;
+    background-color: var(--color-section-title-mobile);
+    box-shadow: 10px 10px 60px var(--color-list-hover-active);
+    display: inline-block;
+    height: auto;
+    max-width: 600px;
+    min-height: 500px;
+    vertical-align: middle;
+    width: 60%;
+    position: fixed;
+    border-radius: 8px;
+    margin: auto;
+    overflow: scroll;
+    top: 30vh;
+    left: calc(50vw - 300px);
+    z-index: 20;
+}
+
 .main-info {
     position: fixed;
     width: 100%;
+}
+
+.more-info-close {
+    display: initial;
+    font-size: var(--font-size-close-button);
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+.more-info-close:hover {
+    cursor: pointer;
 }
 
 .section {
@@ -189,59 +226,15 @@ a:active {
     margin-top: 50px;
 }
 
-.single-skill {
+/* .single-skill {
     display: flex;
     height: 50px;
     margin-top: 20px;
-}
+} */
 
-.blank-div {
-    -ms-flex: 1;
-    flex: 1;
+.skill-group-learning {
+    padding-top: 3%;
 }
-
-.skill-title {
-    -ms-flex: 1;
-    flex: 1;
-    max-width: 150px;
-    min-width: 125px;
-    height: 100%;
-    align-self: center;
-    text-align: right;
-}
-
-.progress-bar {
-    -ms-flex: 1;
-    flex: 1;
-    margin-left: 50px;
-    height: 20px;
-    border-style: solid;
-    border-color: var(--color-progress-bar);
-    max-width: 350px;
-    min-width: 150px;
-}
-
-.actual-progress {
-    height: 100%;
-    background-color: var(--color-progress-bar);
-}
-
-#js-bar {
-    width: 85%;
-}
-
-#java-bar {
-    width: 75%;
-}
-
-#cpp-bar {
-    width: 65%;
-}
-
-#python-bar {
-    width: 55%;
-}
-
 
 @media only screen and (max-width: 1100px) {
 
@@ -262,14 +255,19 @@ a:active {
         position: relative;
         width: auto;
     }
-    
-    .info-section {
-        margin: 3% 40px;
+
+    .more-info-close {
+        display: none;
     }
 
     .section {
         margin: auto;
         margin-top: 100px;
+    }
+    
+    .info-section {
+        margin: 3% 40px;
+        margin-top: 15%;
     }
 
     .section-title {
@@ -284,26 +282,6 @@ a:active {
         box-shadow: 0px 15px 15px var(--color-dot-active);
     }
     
-    .single-skill {
-        display: initial;
-        margin: auto;
-    }
-
-    .skill-title {
-        min-width: none;
-        max-width: none;
-        text-align: center;
-    }
-
-    .blank-div {
-        display: none;
-    }
-        
-    .progress-bar {
-        width: 200px;
-        margin: auto;
-    }
-
     .contacts-icons {
         top: auto;
         left: 10px;
@@ -377,11 +355,11 @@ a:active {
 @keyframes translate {
     from {
         opacity: 0;
-        transform: translate(0px, 80px);
+        /* transform: translate(0px, 80px); */
     }
     to {
         opacity: 100;
-        transform: translate(0px, 0px);
+        /* transform: translate(0px, 0px); */
     }
 }
 

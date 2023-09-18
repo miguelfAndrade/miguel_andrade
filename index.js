@@ -3,6 +3,9 @@ let allListElements = document.getElementsByClassName('list-element');
 
 let contactsIcons = document.getElementById('icons-list');
 
+let moreInfo = document.getElementById('more-info');
+let closeMoreInfo = document.getElementById("more-info-close");
+
 let aboutMeSection = document.getElementById("about-me");
 let experienceSection = document.getElementById("experience");
 let skillsSection = document.getElementById("skills");
@@ -144,4 +147,14 @@ function resetDisplaySections(value) {
     }
 }
 
+// Function to show pop-up for additional content
+
+function seeMoreInfo(showMoreInfo) {
+    if(showMoreInfo) {
+        moreInfo.style.visibility = 'visible';
+    }
+    else {
+        moreInfo.style.visibility = 'hidden';
+    }
+}
 
