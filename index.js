@@ -1,10 +1,16 @@
 let allSections = document.getElementsByClassName('section');
 let allListElements = document.getElementsByClassName('list-element');
 
+let mainTitleHeight = document.getElementById('main-title').clientHeight;
+
 let contactsIcons = document.getElementById('icons-list');
 
-let moreInfo = document.getElementById('more-info');
-let closeMoreInfo = document.getElementById("more-info-close");
+let contactIconsButton = document.getElementById('contacts-button');
+
+let moreInfoSkill = document.getElementById('more-info-skill');
+let closeMoreInfoSkill = document.getElementById("more-info-close-skill");
+let linkMoreInfoSkill = document.getElementById("more-info-link-skill");
+let showMoreInfoSkill = false;
 
 let aboutMeSection = document.getElementById("about-me");
 let experienceSection = document.getElementById("experience");
@@ -26,28 +32,31 @@ let scrollVar;
 
 let mobileWidth = 1100;
 
-let hideIcons = true;
+let showHideIcons = false;
 
-window.onload = function() {
-    contactsIcons.setAttribute('hidden', hideIcons);
+let sectionCurrentlyActive = 'about-me';
+let sectionLastActive = 'about-me';
+
+window.onload = function() {    
     document.body.style.setProperty('--body-height', ((allListElements.length * window.innerHeight) + 'px'));
     if(window.innerWidth <= mobileWidth) {
         resetDisplaySections('inherit');
-        hideSocialsIcons('icons-list');
+        seeSocialsIcons();
     }
     else {
-        activateSection('about-me');
+        sectionCurrentlyActive = 'about-me';
     }
+    activateSection(sectionCurrentlyActive);
 }
 
 window.onresize = function() {
-    // hideSocialsIcons('icons-list');
+    seeSocialsIcons();
+    activateSection(sectionCurrentlyActive);
     if(window.innerWidth <= mobileWidth) {
         resetDisplaySections('inherit');
     }
     else {
-        activateSection('about-me');
-        hideIcons = true;
+        showHideIcons = true;
     }
 };
 
@@ -61,58 +70,76 @@ window.onscroll = function(event) {
     }
     else 
     {
+        sectionLastActive = sectionCurrentlyActive;
         if(0 < scrollVar <= sectionDivision)
         {
-            activateSection('about-me');
+            sectionCurrentlyActive = 'about-me';
         }
         else if(sectionDivision < scrollVar <= (2*sectionDivision))
         {
-            activateSection('experience');
+            sectionCurrentlyActive = 'experience';
         }
         else if((2*sectionDivision) < scrollVar <= (3*sectionDivision))
         {
-            activateSection('studies');
+            sectionCurrentlyActive = 'studies';
         }
         else if((3*sectionDivision) < scrollVar <= (4*sectionDivision))
         {
-            activateSection('skills');
+            sectionCurrentlyActive = 'skills';
         }
         else if((4*sectionDivision) < scrollVar <= (5*sectionDivision))
         {
-            activateSection('languages');
+            sectionCurrentlyActive = 'languages';
         }
         else if((5*sectionDivision) < scrollVar <= (6*sectionDivision))
         {
-            activateSection('projects');
+            sectionCurrentlyActive = 'projects';
+        }
+
+        if(sectionCurrentlyActive !== sectionLastActive) {
+            activateSection(sectionCurrentlyActive);
+            seeMoreInfoSkill();
         }
     }
+
 }
 
-function cursorClicks(id) {
-    activateSection(id);
-}
+contactIconsButton.addEventListener('click', () => {
+    showHideIcons = !showHideIcons;
+    console.log(showHideIcons);
+    seeSocialsIcons();
+})
 
-function hideSocialsIcons(iconsListId) {
-    let iconsList = document.getElementById(iconsListId);
-    if(hideIcons) {
-        iconsList.classList.remove("icon-list-show");
-        iconsList.classList.add("icon-list-hide");
+function seeSocialsIcons() {
+    if(showHideIcons) {
+        contactsIcons.classList.remove("icon-list-hide");
+        contactsIcons.classList.add("icon-list-show");
     }
     else {
-        iconsList.classList.remove("icon-list-hide");
-        iconsList.classList.add("icon-list-show");
+        contactsIcons.classList.remove("icon-list-show");
+        contactsIcons.classList.add("icon-list-hide");
     }
-    hideIcons = !hideIcons;
-    iconsList.setAttribute('hidden', hideIcons);
 }
 
+function sectionClick(id) {
+    sectionLastActive = sectionCurrentlyActive;
+    sectionCurrentlyActive = id;
+    activateSection(sectionCurrentlyActive);
+}
 
 function activateSection(sectionId) {
     resetDisplaySections('none');
     let elem = document.getElementById(sectionId);
     let elemList = document.getElementById(elem.id + '-list');
+
     elem.style.display = 'inherit';
+    let sectionMarginTop = (window.innerHeight/2) - ((elem.clientHeight/2) + mainTitleHeight);
+    if(sectionMarginTop >= 0) {
+        elem.style.marginTop = sectionMarginTop + "px";
+    }
+
     elem.classList.add("section-animation");
+
     elemList.classList.add("section-active");
     elemList.firstElementChild.classList.add("dot-active");
     // if(sectionId == 'about-me') {
@@ -138,7 +165,7 @@ function activateSection(sectionId) {
     // console.log(document.documentElement.scrollTop);
 }
 
-function resetDisplaySections(value) {
+function resetDisplaySections(value) {    
     for(i=0; i<allListElements.length; i++) {
         allSections[i].style.display = value;
         allSections[i].classList.remove("section-animation");
@@ -149,12 +176,18 @@ function resetDisplaySections(value) {
 
 // Function to show pop-up for additional content
 
-function seeMoreInfo(showMoreInfo) {
-    if(showMoreInfo) {
-        moreInfo.style.visibility = 'visible';
+function seeMoreInfoSkill() {
+    showMoreInfoSkill = !showMoreInfoSkill
+    if(showMoreInfoSkill) {
+        moreInfoSkill.style.display = 'initial';
+        moreInfoSkill.classList.remove('hide-more-info-animation');
+        moreInfoSkill.classList.add('show-more-info-animation');
+        linkMoreInfoSkill.innerHTML = 'Less information';
     }
     else {
-        moreInfo.style.visibility = 'hidden';
+        moreInfoSkill.classList.remove('show-more-info-animation');
+        moreInfoSkill.classList.remove('hide-more-info-animation');
+        moreInfoSkill.style.display = 'none';
+        linkMoreInfoSkill.innerHTML = 'More information';
     }
 }
-
