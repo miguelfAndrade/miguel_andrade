@@ -22,7 +22,7 @@
 </head>
 <body id="all-content">
     <div class="main-info">
-        <h1 class="main-title">Miguel Andrade</h1>
+        <h1 id="main-title" class="main-title">Miguel Andrade</h1>
         <div id="about-me" class="section">
             <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
@@ -88,9 +88,17 @@
                     <h3>Other</h3>
                     <h4>Docker, Git, Bash, PowerShell, NodeJS, LaTeX, AEM</p>
                 </div>
-                <div class="skill-group-learning">
-                    <h3>Technologies to Learn</h3>
-                    <h4>OpenGL, Vulkan, DirectX</p>
+                <a id="more-info-link-skill" class="more-info-link" onclick="seeMoreInfoSkill()">More information</a>
+                <div id="more-info-skill" class="more-info">
+                    <a id="more-info-close-skill" class="more-info-close" onclick="seeMoreInfoSkill()">&times;</a>
+                    <div class="skill-group-learning">
+                        <h3>Technologies that I played with</h3>
+                        <h4>SpringBoot, React, Unity, Unreal Engine</p>
+                    </div>
+                    <div class="skill-group-learning">
+                        <h3>Technologies to learn</h3>
+                        <h4>OpenGL, Vulkan, DirectX</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,21 +134,21 @@
         </div>
         <div id="main-menu" class="main-menu">
             <ul id="menu-list" class="menu-list">
-                <a href="#about"><li id="about-me-list" class="list-element" onclick="cursorClicks('about-me')">About Me<span class="dot"></span></li></a>
-                <a href="#experience"><li id="experience-list" class="list-element" onclick="cursorClicks('experience')">Experience<span class="dot"></span></li></a>
-                <a href="#studies"><li id="studies-list" class="list-element" onclick="cursorClicks('studies')">Education<span class="dot"></span></li></a>
-                <a href="#skills"><li id="skills-list" class="list-element" onclick="cursorClicks('skills')">Skills<span class="dot"></span></li></a>
-                <a href="#languages"><li id="languages-list" class="list-element" onclick="cursorClicks('languages')">Languages<span class="dot"></span></li></a>
-                <a href="#projects"><li id="projects-list" class="list-element" onclick="cursorClicks('projects')">Personal Projects<span class="dot"></span></li></a>
+                <a href="#about"><li id="about-me-list" class="list-element" onclick="sectionClick('about-me')">About Me<span class="dot"></span></li></a>
+                <a href="#experience"><li id="experience-list" class="list-element" onclick="sectionClick('experience')">Experience<span class="dot"></span></li></a>
+                <a href="#studies"><li id="studies-list" class="list-element" onclick="sectionClick('studies')">Education<span class="dot"></span></li></a>
+                <a href="#skills"><li id="skills-list" class="list-element" onclick="sectionClick('skills')">Skills<span class="dot"></span></li></a>
+                <a href="#languages"><li id="languages-list" class="list-element" onclick="sectionClick('languages')">Languages<span class="dot"></span></li></a>
+                <a href="#projects"><li id="projects-list" class="list-element" onclick="sectionClick('projects')">Personal Projects<span class="dot"></span></li></a>
             </ul>
         </div>
         <div id="contacts-icons" class="contacts-icons">
-            <div id="icons-list" class="icons-list" hidden="true">
+            <div id="icons-list" class="icons-list" hidden="false">
                 <a id="github-link" href="https://github.com/miguelfAndrade" target="_blank" aria-label="My GitHub page"><li><i class="fa fa-github"></i></li></a>
                 <a id="mail-link" href="mailto:pro.mandrade@gmail.com" target="_blank" aria-label="My email address"><li><i class="fa fa-envelope"></i></li></a>
                 <a id="linkedin-link" href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank" aria-label="My LinkedIn profile"><li><i class="fa fa-linkedin-square"></i></li></a>
             </div>
-            <a onclick="hideSocialsIcons('icons-list')" id="contacts-button" class="contacts-button"><i class="fa fa-ellipsis-v"></i></a>
+            <a id="contacts-button" class="contacts-button"><i class="fa fa-ellipsis-v"></i></a>
         </div>
     </div>
     <script src="index.js"></script>

@@ -3,7 +3,7 @@
 
     --color-font: black;
     --color-h4: #707070;
-    --font-size: 20px;
+    --font-size: 1.1em;
     --font-size-menu: 15px;
     --font-size-close-button: 50px;
 
@@ -73,20 +73,21 @@ a:active {
 }
 
 .more-info {
-    visibility: hidden;
     background-color: var(--color-section-title-mobile);
     box-shadow: 10px 10px 60px var(--color-list-hover-active);
-    display: inline-block;
+    display: none;
     height: auto;
     max-width: 600px;
-    min-height: 500px;
+    min-height: 200px;
+    max-height: 70vh;
     vertical-align: middle;
     width: 60%;
     position: fixed;
     border-radius: 8px;
     margin: auto;
-    overflow: scroll;
-    top: 30vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 20vh;
     left: calc(50vw - 300px);
     z-index: 20;
 }
@@ -97,11 +98,12 @@ a:active {
 }
 
 .more-info-close {
-    display: initial;
     font-size: var(--font-size-close-button);
-    position: absolute;
-    top: -20px;
-    right: 10px;
+    display: block;
+    position: sticky;
+    top: 0px;
+    transform: translate(280px, -20px);
+    max-height: 15px
 }
 
 .more-info-close:hover {
@@ -110,11 +112,24 @@ a:active {
 
 .section {
     height: auto;
-    margin: 100px 250px;
+    margin-right: 250px;
+    margin-left: 250px;
 }
 
 .section-animation {
-    animation: translate 1s linear infinite;
+    animation: fadeIn 1s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.show-more-info-animation {
+    animation: fadeIn 0.5s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.hide-more-info-animation {
+    animation: hidePopUp 0.5s linear infinite;
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
@@ -226,14 +241,9 @@ a:active {
     margin-top: 50px;
 }
 
-/* .single-skill {
-    display: flex;
-    height: 50px;
-    margin-top: 20px;
-} */
 
 .skill-group-learning {
-    padding-top: 3%;
+    padding: 1% 50px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -249,6 +259,23 @@ a:active {
     .main-menu {
         display: none;
         height: auto;
+    }
+
+    .more-info {
+        box-shadow: none;
+        height: auto;
+        max-width: none;
+        min-height: none;
+        max-height: none;
+        vertical-align: middle;
+        width: auto;
+        position: initial;
+        border-radius: none;
+        margin: auto;
+        overflow-y: none;
+        top: auto;
+        left: auto;
+        z-index: 0;
     }
 
     .main-info{
@@ -328,19 +355,19 @@ a:active {
 
 
     #github-link {
-        animation: animate-icons 2s linear 0s 1;
+        animation: fadeIn 2s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
 
     #mail-link {
-        animation: animate-icons 1.5s linear 0s 1;
+        animation: fadeIn 1.5s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
 
     #linkedin-link {
-        animation: animate-icons 1s linear 0s 1;
+        animation: fadeIn 1s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
@@ -352,18 +379,7 @@ a:active {
     }
 }
 
-@keyframes translate {
-    from {
-        opacity: 0;
-        /* transform: translate(0px, 80px); */
-    }
-    to {
-        opacity: 100;
-        /* transform: translate(0px, 0px); */
-    }
-}
-
-@keyframes animate-icons {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -372,4 +388,30 @@ a:active {
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showPopUp {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: 20vh;
+    }
+}
+
+@keyframes hidePopUp {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
