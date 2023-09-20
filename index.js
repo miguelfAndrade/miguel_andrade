@@ -35,7 +35,7 @@ let mobileWidth = 1100;
 let showHideIcons = false;
 
 let sectionCurrentlyActive = 'about-me';
-let sectionLastActive = 'about-me';
+let sectionLastActive = sectionCurrentlyActive;
 
 window.onload = function() {    
     document.body.style.setProperty('--body-height', ((allListElements.length * window.innerHeight) + 'px'));
@@ -98,7 +98,7 @@ window.onscroll = function(event) {
 
         if(sectionCurrentlyActive !== sectionLastActive) {
             activateSection(sectionCurrentlyActive);
-            seeMoreInfoSkill();
+            // seeMoreInfoSkill();
         }
     }
 

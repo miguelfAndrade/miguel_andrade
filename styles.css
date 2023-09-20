@@ -16,6 +16,8 @@
 
     --color-progress-bar: black;
     --color-icons: black;
+
+    --color-more-info-link: rgb(43, 76, 107);
     
     --font-size-icons: 25px;
     --font-size-icons-hover: 30px;
@@ -66,6 +68,12 @@ a:active {
     width: 15vw;
     height: auto;
     border-radius: 50%;
+}
+
+.more-info-link {
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--color-more-info-link);
 }
 
 .more-info-link:hover {
@@ -167,7 +175,7 @@ a:active {
 }
 
 .section-active {
-    color: black;
+    color: var(--color-list-active);
 }
 
 .dot-active {
@@ -237,9 +245,9 @@ a:active {
     margin-top: 3%;
 }
 
-#skills .info-section {
+/* #skills .info-section {
     margin-top: 50px;
-}
+} */
 
 
 .skill-group-learning {
@@ -287,6 +295,10 @@ a:active {
         display: none;
     }
 
+    .more-info-link:hover {
+        cursor: pointer;
+    }
+
     .section {
         margin: auto;
         margin-top: 100px;
@@ -295,6 +307,10 @@ a:active {
     .info-section {
         margin: 3% 40px;
         margin-top: 15%;
+    }
+
+    .skill-group:last-child {
+        margin-bottom: 5vh;
     }
 
     .section-title {
