@@ -1,0 +1,218 @@
+@import url(variables.css);
+@import url(animations.css);
+
+#all-content {
+    text-align: center;
+    color: var(--color-font);
+    font-family: var(--fonts);
+    font-size: var(--font-size);
+    min-height: var(--body-height);
+    margin-left:auto;
+    margin-right:auto;
+    /* background-image: linear-gradient(180deg, rgb(252, 230, 230) 0%, rgb(255, 255, 255) 100%); */
+}
+
+h4 {
+    color: var(--color-h4);
+}
+
+a {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#img-perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15vw;
+    height: auto;
+    border-radius: 50%;
+}
+
+.more-info-link {
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--color-more-info-link);
+}
+
+.more-info-link:hover {
+    cursor: pointer;
+}
+
+.more-info {
+    background-color: var(--color-section-title-mobile);
+    box-shadow: 10px 10px 60px var(--color-list-hover-active);
+    display: none;
+    height: auto;
+    max-width: 600px;
+    min-height: 200px;
+    max-height: 70vh;
+    vertical-align: middle;
+    width: 60%;
+    position: fixed;
+    border-radius: 8px;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 20vh;
+    left: calc(50vw - 300px);
+    z-index: 20;
+}
+
+.main-info {
+    position: fixed;
+    width: 100%;
+}
+
+.more-info-close {
+    font-size: var(--font-size-close-button);
+    display: block;
+    position: sticky;
+    top: 0px;
+    transform: translate(280px, -20px);
+    max-height: 15px
+}
+
+.more-info-close:hover {
+    cursor: pointer;
+}
+
+.section {
+    height: auto;
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+.section-animation {
+    animation: fadeIn 1s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.show-more-info-animation {
+    animation: fadeIn 0.5s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.hide-more-info-animation {
+    animation: hidePopUp 0.5s linear infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.section-title {
+    padding-top: 3%;
+}
+
+.main-menu {
+    font-size: var(--font-size-menu);
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    text-align: right;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.list-element {
+    margin-top: 5%;
+    color: var(--color-list-inactive);
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    border-style: solid;
+    border-color: var(--color-dot-active);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    transform: translate(0px, 20%);
+}
+
+.section-active {
+    color: var(--color-list-active);
+}
+
+.dot-active {
+    background-color: var(--color-dot-active);
+}
+
+.section-inactive{
+    color: var(--color-list-inactive);
+}
+
+.dot-inactive {
+    background-color: var(--color-dot-inactive);
+}
+
+.list-element:hover {
+    color: var(--color-list-hover-active);
+    cursor: pointer;
+}
+
+.list-element:hover .dot {
+    background-color: var(--color-dot-hover-active);
+}
+
+.contacts-icons {
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    text-align: left;
+}
+
+.contacts-icons a {
+    color: var(--color-icons);
+    font-size: var(--font-size-icons);
+}
+
+.contacts-icons a:first-child {
+    font-size: var(--font-size-icons-git-linkedin);
+}
+
+.contacts-icons a:last-child {
+    font-size: var(--font-size-icons-git-linkedin);
+}
+
+.contacts-icons a:hover {
+    font-size: var(--font-size-icons-hover);
+}
+
+.contacts-icons a:first-child:hover {
+    font-size: var(--font-size-icons-git-linkedin-hover);
+}
+
+.contacts-icons a:last-child:hover {
+    font-size: var(--font-size-icons-git-linkedin-hover);
+}
+
+.icons-list {
+    opacity: 100;
+    display: inherit;
+}
+
+.contacts-button {
+    display: none;
+}
+
+.info-section {
+    margin-top: 3%;
+}
+
+.skill-group-learning {
+    padding: 1% 50px;
+}
