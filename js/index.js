@@ -98,7 +98,6 @@ window.onscroll = function(event) {
 
         if(sectionCurrentlyActive !== sectionLastActive) {
             activateSection(sectionCurrentlyActive);
-            // seeMoreInfoSkill();
         }
     }
 
@@ -164,6 +163,8 @@ function activateSection(sectionId) {
     // console.log(scrollVar);
     // console.log(document.documentElement.scrollTop);
 }
+
+//
 
 function resetDisplaySections(value) {    
     for(i=0; i<allListElements.length; i++) {

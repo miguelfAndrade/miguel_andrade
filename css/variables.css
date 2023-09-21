@@ -1,0 +1,33 @@
+:root {
+    --fonts: 'Prompt', Arial, sans-serif;
+
+    --color-font: black;
+    --color-h4: #707070;
+    --font-size: 1.1em;
+    --font-size-menu: 15px;
+    --font-size-close-button: 50px;
+
+    --color-dot-active: #AAAAAA;
+    --color-dot-inactive: white;
+    --color-dot-hover-active: #AAAAAA;
+    --color-list-active: black;
+    --color-list-inactive: #AAAAAA;
+    --color-list-hover-active: #707070;
+
+    --color-progress-bar: black;
+    --color-icons: black;
+
+    --color-more-info-link: rgb(43, 76, 107);
+    
+    --font-size-icons: 25px;
+    --font-size-icons-hover: 30px;
+    --font-size-icons-git-linkedin: 30px;
+    --font-size-icons-git-linkedin-hover: 35px;
+    
+    
+    --font-size-mobile: 15px;
+    --font-size-icons-mobile: 25px;
+    --font-size-icons-git-linkedin-mobile: 30px;
+    --color-section-title-mobile: white;
+    --color-section-title-gradient-mobile: #ebebeb;
+  }

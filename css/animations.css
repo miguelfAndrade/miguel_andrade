@@ -1,0 +1,35 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showPopUp {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: 20vh;
+    }
+}
+
+@keyframes hidePopUp {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
