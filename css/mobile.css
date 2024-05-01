@@ -70,6 +70,7 @@
         background-image: linear-gradient(var(--color-section-title-mobile), var(--color-section-title-gradient-mobile));
         border-radius: 0 0 30% 30%;
         box-shadow: 0px 15px 15px var(--color-dot-active);
+        z-index: 30;
     }
     
     .contacts-icons {
