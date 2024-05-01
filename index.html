@@ -29,9 +29,42 @@
             <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
             <div class="info-section">
-                <p>Welcome to my personal website! My name is Miguel Andrade, I'm 27 years old and I'm currently living in Vila das Aves, a town located in the north of Portugal, about 30Km from Porto.</p>
+                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">28</span> years old and I'm currently living in Madrid, Spain.</p>
+                <p>My hometown is Vila das Aves, a town located in the north of Portugal, about 30Km from Porto.</p>
                 <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
             </div>
+        </div>
+        <div id="profissionalProjects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="info-section">
+                <h3>Banco de España</h3>
+                <h4>Support and Development</h4>
+                <p>WEM, JAVA, SQL</p>
+                <p>Feb 2024 - Present</p>
+            </div>
+            <div class="info-section">
+                <h3>Bankinter</h3>
+                <h4>Development</h4>
+                <p>WEM, JAVA</p>
+                <p>2023 - Feb 2024</p>
+            </div>
+            <br/>
+            <a id="prof-projs-link" class="more-info-link" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', true)">More information</a>
+            <a id="prof-projs-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">Less information</a>
+            <div id="prof-projs-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">&times;</a>
+                <h3>CaixaBank</h3>
+                <h4>Proof of Concept of a Website Page</h4>
+                <p>AEM</p>
+                <p>2023</p>
+            </div>
+            <!-- Tags for additional content -->
+            <!-- <br/>
+            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
+            <div id="more-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
+                <h1>HALOU!!!</h1>
+            </div> -->
         </div>
         <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
@@ -45,13 +78,6 @@
                 <h4>Pingo Doce, Jerónimo Martins Group</h4>
                 <p>Infias, Vizela (Portugal)</p>
             </div>
-            <!-- Tags for additional content -->
-            <!-- <br/>
-            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
-            <div id="more-info" class="more-info">
-                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
-                <h1>HALOU!!!</h1>
-            </div> -->
         </div>
         <div id="studies" class="section">
             <h2 class="section-title">Education</h2>
@@ -70,36 +96,46 @@
                 <h4>Polytechnic Institute of Viana do Castelo, Viana do Castelo (Portugal)</h4>
                 <p>2014 - 2017</p>
             </div>
+            <!-- <a id="studies-link" class="more-info-link" onclick="seeMoreInfo('studies-info', true)">Certifications</a> -->
+            <a id="studies-link" class="more-info-link" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', true)">Certifications</a>
+            <a id="studies-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">Less information</a>
+            <div id="studies-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">&times;</a>
+                <h3>Adobe Certified Expert - Adobe Experience Manager Sites Developer</h3>
+                <h4>Adobe</h4>
+                <p> Mar 2023 - Mar 2025</p>
+            </div>
         </div>
         <div id="skills" class="section">
             <h2 class="section-title">Skills</h2>
             <div class="info-section">
                 <div class="skill-group">
                     <h3>Programming Languages</h3>
-                    <h4>JavaScript, Java, C/C++, Python, C#</p>
+                    <h4>JavaScript, Java, C/C++, Python, C#</h4>
                 </div>
                 <div class="skill-group">
                     <h3>Web Development</h3>
-                    <h4>HTML, CSS, Bootstrap, WebGL</p>
+                    <h4>HTML, CSS, Bootstrap, WebGL</h4>
                 </div>
                 <div class="skill-group">
                     <h3>Databases</h3>
-                    <h4>MySQL, PostgreSQL</p>
+                    <h4>MySQL, PostgreSQL</h4>
                 </div>
                 <div class="skill-group">
                     <h3>Other</h3>
-                    <h4>Docker, Git, Bash, PowerShell, NodeJS, LaTeX, AEM</p>
+                    <h4>Docker, Git, Bash, PowerShell, NodeJS, LaTeX, AEM</h4>
                 </div>
-                <a id="more-info-link-skill" class="more-info-link" onclick="seeMoreInfoSkill()">More information</a>
+                <a id="more-info-link-skill" class="more-info-link" onclick="seeMoreInfo('more-info-link-skill', 'more-info-link-skill-2', 'more-info-skill', true)">More information</a>
+                <a id="more-info-link-skill-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('more-info-link-skill', 'more-info-link-skill-2', 'more-info-skill', false)">Less information</a>
                 <div id="more-info-skill" class="more-info">
-                    <a id="more-info-close-skill" class="more-info-close" onclick="seeMoreInfoSkill()">&times;</a>
+                    <a id="more-info-close-skill" class="more-info-close" onclick="seeMoreInfo('more-info-link-skill', 'more-info-link-skill-2', 'more-info-skill', false)">&times;</a>
                     <div class="skill-group-learning">
                         <h3>Technologies that I played with</h3>
-                        <h4>SpringBoot, React, Unity, Unreal Engine</p>
+                        <h4>SpringBoot, React, Unity, Unreal Engine</h4>
                     </div>
                     <div class="skill-group-learning">
                         <h3>Technologies to learn</h3>
-                        <h4>OpenGL, Vulkan, DirectX</p>
+                        <h4>OpenGL, Vulkan, DirectX</h4>
                     </div>
                 </div>
             </div>
@@ -112,10 +148,10 @@
                 <h3>English</h3>
                 <p>Intermediate</p>
                 <h3>Spanish</h3>
-                <p>Basic</p>
+                <p>Intermediate</p>
             </div>
         </div>
-        <div id="projects" class="section">
+        <div id="personalProjects" class="section">
             <h2 class="section-title">Personal Projects</h2>
             <div class="info-section">
                 <a href="https://github.com/miguelfAndrade/miguel_andrade" target="_blank"><h3>This Website Project <i class="fa fa-external-link-square"></i></h3></i></a>
@@ -137,11 +173,12 @@
         <div id="main-menu" class="main-menu">
             <ul id="menu-list" class="menu-list">
                 <a href="#about"><li id="about-me-list" class="list-element" onclick="sectionClick('about-me')">About Me<span class="dot"></span></li></a>
+                <a href="#profissionalProjects"><li id="profissionalProjects-list" class="list-element" onclick="sectionClick('profissionalProjects')">Projects<span class="dot"></span></li></a>
                 <a href="#experience"><li id="experience-list" class="list-element" onclick="sectionClick('experience')">Experience<span class="dot"></span></li></a>
                 <a href="#studies"><li id="studies-list" class="list-element" onclick="sectionClick('studies')">Education<span class="dot"></span></li></a>
                 <a href="#skills"><li id="skills-list" class="list-element" onclick="sectionClick('skills')">Skills<span class="dot"></span></li></a>
                 <a href="#languages"><li id="languages-list" class="list-element" onclick="sectionClick('languages')">Languages<span class="dot"></span></li></a>
-                <a href="#projects"><li id="projects-list" class="list-element" onclick="sectionClick('projects')">Personal Projects<span class="dot"></span></li></a>
+                <a href="#personalProjects"><li id="personalProjects-list" class="list-element" onclick="sectionClick('personalProjects')">Personal Projects<span class="dot"></span></li></a>
             </ul>
         </div>
         <div id="contacts-icons" class="contacts-icons">

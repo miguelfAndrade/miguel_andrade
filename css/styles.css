@@ -48,6 +48,10 @@ a:active {
     cursor: pointer;
 }
 
+.more-info-link-2 {
+    display: none;
+}
+
 .more-info {
     background-color: var(--color-section-title-mobile);
     box-shadow: 10px 10px 60px var(--color-list-hover-active);
