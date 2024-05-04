@@ -72,6 +72,10 @@ a:active {
     z-index: 20;
 }
 
+/* .more-info, div{
+    margin-top: 3%;
+} */
+
 .main-info {
     position: fixed;
     width: 100%;
@@ -177,6 +181,7 @@ a:active {
     top: 50%;
     left: 20px;
     text-align: left;
+    z-index: 200;
 }
 
 .contacts-icons a {
@@ -217,6 +222,14 @@ a:active {
     margin-top: 3%;
 }
 
-.skill-group-learning {
+.more-info-section{
     padding: 1% 50px;
+}
+
+.more-info-section-link a {
+    color: var(--color-more-info-link);
+}
+
+.more-info-section-link a:hover {
+    text-decoration: underline;
 }
