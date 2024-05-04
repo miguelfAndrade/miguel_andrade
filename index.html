@@ -29,54 +29,78 @@
             <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
             <div class="info-section">
-                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">28</span> years old and I'm currently living in Madrid, Spain.</p>
-                <p>My hometown is Vila das Aves, a town located in the north of Portugal, about 30Km from Porto.</p>
+                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">27</span> years old and I'm currently living in Madrid, Spain.</p>
+                <p>My hometown is Vila das Aves, a town located in the north of Portugal, about 35Km from Porto and Braga.</p>
                 <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
             </div>
         </div>
         <div id="profissionalProjects" class="section">
             <h2 class="section-title">Projects</h2>
-            <div class="info-section">
+            <div class="info-section more-info-section-link">
                 <h3>Banco de España</h3>
-                <h4>Support and Development</h4>
-                <p>WEM, JAVA, SQL</p>
+                <h4>Support and Development Services</h4>
+                <h5><a href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA, SQL</h5>
                 <p>Feb 2024 - Present</p>
             </div>
-            <div class="info-section">
+            <div class="info-section more-info-section-link">
                 <h3>Bankinter</h3>
-                <h4>Development</h4>
-                <p>WEM, JAVA</p>
-                <p>2023 - Feb 2024</p>
+                <h4>Development Services</h4>
+                <h5><a href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA</h5>
+                <p>Aug 2023 - Feb 2024</p>
             </div>
             <br/>
             <a id="prof-projs-link" class="more-info-link" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', true)">More information</a>
             <a id="prof-projs-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">Less information</a>
             <div id="prof-projs-info" class="more-info">
                 <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">&times;</a>
-                <h3>CaixaBank</h3>
-                <h4>Proof of Concept of a Website Page</h4>
-                <p>AEM</p>
-                <p>2023</p>
+                <div class="more-info-section more-info-section-link">
+                    <h3>CaixaBank</h3>
+                    <h4>Proof of Concept for an ABanca website page</h4>
+                    <h5><a href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html" target="_blank">AEM</a> Adobe Experience Manager</h5>
+                    <p>Jun 2023 - Jul 2023</p>
+                </div>
+                <div class="more-info-section more-info-section-link">
+                    <h3>ABanca</h3>
+                    <h4>Development and maintenance of documents models</h4>
+                    <h5><a href="https://www.opentext.com/products/ccm-software" target="_blank">OpenText CEM</a> Exstream/StreamServe</h5>
+                    <p>Feb 2022 - Nov 2022</p>
+                </div>
             </div>
             <!-- Tags for additional content -->
             <!-- <br/>
-            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
-            <div id="more-info" class="more-info">
-                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
-                <h1>HALOU!!!</h1>
+            <a id="link-id" class="more-info-link" onclick="seeMoreInfo('link-id', 'link-id-2', 'popup-info', true)">More information</a>
+            <a id="link-id-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('link-id', 'link-id-2', 'popup-info', false)">Less information</a>
+            <div id="popup-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('link-id', 'link-id-2', 'popup-info', false)">&times;</a>
+                <div class="more-info-section">
+                    <h1>Hello!!</h1>
+                </div>
             </div> -->
         </div>
         <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
             <div class="info-section">
                 <h3>Junior Consultant</h3>
-                <h4>VILT - Portugal</h4>
-                <p>Braga, Portugal</p>
+                <h4>VILT - Spain</h4>
+                <p>Madrid, Spain</p>
+                <p>Feb 2024 - Present</p>
             </div>
             <div class="info-section">
-                <h3>Cashier, Weekend Part-Time</h3>
-                <h4>Pingo Doce, Jerónimo Martins Group</h4>
-                <p>Infias, Vizela (Portugal)</p>
+                <h3>Junior Consultant</h3>
+                <h4>VILT - Portugal</h4>
+                <p>Braga, Portugal</p>
+                <p>Nov 2021 - Feb 2024</p>
+            </div>
+            <a id="experience-link" class="more-info-link" onclick="seeMoreInfo('experience-link', 'experience-link-2', 'experience-info', true)">More information</a>
+            <a id="experience-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('experience-link', 'experience-link-2', 'experience-info', false)">Less information</a>
+            <div id="experience-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('experience-link', 'experience-link-2', 'experience-info', false)">&times;</a>
+                <div class="more-info-section">
+                    <h3>Cashier, Weekend Part-Time</h3>
+                    <h4>Pingo Doce, Jerónimo Martins Group</h4>
+                    <p>Infias, Vizela (Portugal)</p>
+                    <p>Out 2018 - Jan 2022</p>
+                </div>
             </div>
         </div>
         <div id="studies" class="section">
@@ -101,9 +125,12 @@
             <a id="studies-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">Less information</a>
             <div id="studies-info" class="more-info">
                 <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">&times;</a>
-                <h3>Adobe Certified Expert - Adobe Experience Manager Sites Developer</h3>
-                <h4>Adobe</h4>
-                <p> Mar 2023 - Mar 2025</p>
+                <div class="more-info-section">
+                    <a href="https://www.certmetrics.com/adobe/public/verification.aspx" target="_blank"><h3>Adobe Certified Expert - Adobe Experience Manager Sites Developer <i class="fa fa-external-link-square"></i></h3></a>
+                    <h4>Adobe</h4>
+                    <p>50QPYHV1KFEQ1YCX</p>
+                    <p>Mar 2023 - Mar 2025</p>
+                </div>
             </div>
         </div>
         <div id="skills" class="section">
@@ -129,11 +156,11 @@
                 <a id="more-info-link-skill-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('more-info-link-skill', 'more-info-link-skill-2', 'more-info-skill', false)">Less information</a>
                 <div id="more-info-skill" class="more-info">
                     <a id="more-info-close-skill" class="more-info-close" onclick="seeMoreInfo('more-info-link-skill', 'more-info-link-skill-2', 'more-info-skill', false)">&times;</a>
-                    <div class="skill-group-learning">
+                    <div class="more-info-section">
                         <h3>Technologies that I played with</h3>
                         <h4>SpringBoot, React, Unity, Unreal Engine</h4>
                     </div>
-                    <div class="skill-group-learning">
+                    <div class="more-info-section">
                         <h3>Technologies to learn</h3>
                         <h4>OpenGL, Vulkan, DirectX</h4>
                     </div>

@@ -10,27 +10,6 @@ let contactsIcons = document.getElementById('icons-list');
 
 let contactIconsButton = document.getElementById('contacts-button');
 
-let moreInfoSkill = document.getElementById('more-info-skill');
-let closeMoreInfoSkill = document.getElementById("more-info-close-skill");
-let linkMoreInfoSkill = document.getElementById("more-info-link-skill");
-let showMoreInfoSkill = false;
-
-let aboutMeSection = document.getElementById("about-me");
-let profissionalProjectsSection = document.getElementById("profissionalProjects");
-let experienceSection = document.getElementById("experience");
-let skillsSection = document.getElementById("skills");
-let languagesSection = document.getElementById("languages");
-let personalProjectsSection = document.getElementById("personalProjects");
-
-let aboutMeHeight = aboutMeSection.clientHeight;
-let profissionalProjectsHeight = profissionalProjectsSection.clientHeight;
-let experienceHeight = experienceSection.clientHeight;
-let skillsHeight = skillsSection.clientHeight;
-let languagesHeight = languagesSection.clientHeight;
-let personalProjectsHeight = personalProjectsSection.clientHeight;
-
-let allSectionsHeights = aboutMeHeight + profissionalProjectsHeight + experienceHeight + skillsHeight + languagesHeight + personalProjectsHeight;
-
 let sectionDivision = 1/allSections.length;
 
 let scrollVar;
@@ -42,7 +21,8 @@ let showHideIcons = false;
 let sectionCurrentlyActive = 'about-me';
 let sectionLastActive = sectionCurrentlyActive;
 
-window.onload = function() {    
+window.onload = function() {
+    ageText.innerHTML = calculateAge();
     document.body.style.setProperty('--body-height', ((allListElements.length * window.innerHeight) + 'px'));
     if(window.innerWidth <= mobileWidth) {
         resetDisplaySections('inherit');
@@ -52,7 +32,6 @@ window.onload = function() {
         sectionCurrentlyActive = 'about-me';
     }
     activateSection(sectionCurrentlyActive);
-    ageText.innerHTML = calculateAge();
 }
 
 window.onresize = function() {
@@ -68,9 +47,12 @@ window.onresize = function() {
 
 window.onscroll = function(event) {scrollDynamic(event)}
 
+// Handles the scroll mechanism for the website
+// The values are normalized to 1
+// There is a variable that changes value when scrolling and if that number is within a certain range for the section, that section is showed
 function scrollDynamic(event) {
     event.preventDefault();
-    scrollVar = document.documentElement.scrollTop / (document.body.offsetHeight - window.innerHeight);
+    scrollVar = document.documentElement.scrollTop / (document.body.scrollHeight - window.innerHeight);
         
     if(window.innerWidth <= mobileWidth) 
     {
@@ -80,7 +62,7 @@ function scrollDynamic(event) {
     {
         sectionLastActive = sectionCurrentlyActive;
         for (let i = 0; i < allSections.length; i++) {
-            if((i*sectionDivision) < scrollVar <= ((i+1)*sectionDivision)) {
+            if(((i*sectionDivision) < scrollVar) && (scrollVar <= ((i+1)*sectionDivision))) {
                 sectionCurrentlyActive = allSections.item(i).id;
                 break;
             }
@@ -94,10 +76,10 @@ function scrollDynamic(event) {
 
 contactIconsButton.addEventListener('click', () => {
     showHideIcons = !showHideIcons;
-    // console.log(showHideIcons);
     seeSocialsIcons();
 })
 
+// Adds or removes class names to the contacts icons div to show or hide the contact list in mobile view
 function seeSocialsIcons() {
     if(showHideIcons) {
         contactsIcons.classList.remove("icon-list-hide");
@@ -109,12 +91,15 @@ function seeSocialsIcons() {
     }
 }
 
+// Functions that handles the click in the section list
 function sectionClick(id) {
     sectionLastActive = sectionCurrentlyActive;
     sectionCurrentlyActive = id;
     activateSection(sectionCurrentlyActive);
 }
 
+// Changes the appearence of the clicked section in the section list and shows the section in the website
+// TODO - change the scroll value to the correspondent area for the selected section
 function activateSection(sectionId) {
     resetDisplaySections('none');
     let elem = document.getElementById(sectionId);
@@ -153,8 +138,7 @@ function activateSection(sectionId) {
     // console.log(document.documentElement.scrollTop);
 }
 
-//
-
+// It is used to reset the css classes when scrolling or clicking in a different section
 function resetDisplaySections(value) {    
     for(i=0; i<allListElements.length; i++) {
         allSections[i].style.display = value;
@@ -165,7 +149,6 @@ function resetDisplaySections(value) {
 }
 
 // Function to show pop-up for additional content
-
 function seeMoreInfo(idLinkMore, idLinkLess, idElem, showHide) {
     let elem = document.getElementById(idElem);
     let linkMore = document.getElementById(idLinkMore);
@@ -188,6 +171,7 @@ function seeMoreInfo(idLinkMore, idLinkLess, idElem, showHide) {
     }
 }
 
+// Calculates my age with the birth month and current month into account
 function calculateAge () {
     let todayDate = new Date();
     todayDate.toLocaleString("pt-PT");
