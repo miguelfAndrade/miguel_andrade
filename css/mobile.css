@@ -8,7 +8,7 @@
     }
 
     #img-perfil {
-        width: 40vw;
+        width: 25vw;
     }
 
     .main-menu {
@@ -105,7 +105,7 @@
         font-size: var(--font-size-icons-git-linkedin-mobile);
     }
     
-    .contacts-icons a:last-child {
+    .contacts-icons a:nth-child(3) {
         font-size: var(--font-size-icons-git-linkedin-mobile);
     }
 
@@ -113,32 +113,44 @@
         font-size: var(--font-size-icons-git-linkedin-mobile);
     }
     
-    .contacts-icons a:last-child:hover {
+    .contacts-icons a:nth-child(3):hover {
         font-size: var(--font-size-icons-git-linkedin-mobile);
     }
 
 
     #github-link {
-        animation: fadeIn 2s linear 0s 1;
+        animation: fadeIn 2.5s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
 
     #mail-link {
-        animation: fadeIn 1.5s linear 0s 1;
+        animation: fadeIn 2s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
 
     #linkedin-link {
+        animation: fadeIn 1.5s linear 0s 1;
+        animation-play-state: initial;
+        animation-fill-mode: forwards;
+    }
+
+    #pdf-link {
         animation: fadeIn 1s linear 0s 1;
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
 }
 
+@media only screen and (max-width: 800px) {
+    #img-perfil {
+        width: 35vw;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     #img-perfil {
-        width: 60vw;
+        width: 50vw;
     }
 }

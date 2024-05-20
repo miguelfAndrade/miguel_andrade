@@ -193,7 +193,7 @@ a:active {
     font-size: var(--font-size-icons-git-linkedin);
 }
 
-.contacts-icons a:last-child {
+.contacts-icons a:nth-child(3) {
     font-size: var(--font-size-icons-git-linkedin);
 }
 
@@ -205,7 +205,7 @@ a:active {
     font-size: var(--font-size-icons-git-linkedin-hover);
 }
 
-.contacts-icons a:last-child:hover {
+.contacts-icons a:nth-child(3):hover {
     font-size: var(--font-size-icons-git-linkedin-hover);
 }
 
@@ -226,10 +226,10 @@ a:active {
     padding: 1% 50px;
 }
 
-.more-info-section-link a {
+.isolated-link {
     color: var(--color-more-info-link);
 }
 
-.more-info-section-link a:hover {
+.isolated-link:hover {
     text-decoration: underline;
 }

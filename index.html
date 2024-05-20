@@ -29,23 +29,23 @@
             <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
             <div class="info-section">
-                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">27</span> years old and I'm currently living in Madrid, Spain.</p>
+                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">27</span> years old Junior Consultant at VILT IBÉRICA and I'm currently living in Madrid, Spain.</p>
                 <p>My hometown is Vila das Aves, a town located in the north of Portugal, about 35Km from Porto and Braga.</p>
                 <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
             </div>
         </div>
-        <div id="profissionalProjects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="info-section more-info-section-link">
+        <div id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="info-section">
                 <h3>Banco de España</h3>
                 <h4>Support and Development Services</h4>
-                <h5><a href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA, SQL</h5>
+                <h5><a class="isolated-link" href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA, SQL</h5>
                 <p>Feb 2024 - Present</p>
             </div>
-            <div class="info-section more-info-section-link">
+            <div class="info-section">
                 <h3>Bankinter</h3>
                 <h4>Development Services</h4>
-                <h5><a href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA</h5>
+                <h5><a class="isolated-link" href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA</h5>
                 <p>Aug 2023 - Feb 2024</p>
             </div>
             <br/>
@@ -53,16 +53,16 @@
             <a id="prof-projs-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">Less information</a>
             <div id="prof-projs-info" class="more-info">
                 <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('prof-projs-link', 'prof-projs-link-2', 'prof-projs-info', false)">&times;</a>
-                <div class="more-info-section more-info-section-link">
+                <div class="more-info-section">
                     <h3>CaixaBank</h3>
                     <h4>Proof of Concept for an ABanca website page</h4>
-                    <h5><a href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html" target="_blank">AEM</a> Adobe Experience Manager</h5>
+                    <h5><a class="isolated-link" href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html" target="_blank">AEM</a> Adobe Experience Manager</h5>
                     <p>Jun 2023 - Jul 2023</p>
                 </div>
-                <div class="more-info-section more-info-section-link">
+                <div class="more-info-section">
                     <h3>ABanca</h3>
                     <h4>Development and maintenance of documents models</h4>
-                    <h5><a href="https://www.opentext.com/products/ccm-software" target="_blank">OpenText CEM</a> Exstream/StreamServe</h5>
+                    <h5><a class="isolated-link" href="https://www.opentext.com/products/ccm-software" target="_blank">OpenText CEM</a> Exstream/StreamServe</h5>
                     <p>Feb 2022 - Nov 2022</p>
                 </div>
             </div>
@@ -77,7 +77,26 @@
                 </div>
             </div> -->
         </div>
-        <div id="experience" class="section">
+        <div id="personalProjects" class="section">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="info-section">
+                <a href="https://github.com/miguelfAndrade/miguel_andrade" target="_blank"><h3>This Website Project <i class="fa fa-external-link-square"></i></h3></i></a>
+                <p>The title is self-explanatory, this is the GitHub repository of this site.</p>
+                <a href="https://github.com/miguelfAndrade/web_interface_open3d" target="_blank"><h3>My Masters Thesis <i class="fa fa-external-link-square"></i></h3></i></a>
+                <p>The project of my masters thesis, <a class="isolated-link" href="https://hdl.handle.net/10216/152576" target="_blank">Development of a 3D visualisation system for a robotic simulator</a>. The idea here was to process a pointcloud from a robot and generate a 3D geometry from that same pointcloud. We can visualize and interact with this geometry through a graphical interface in the browser.</p>
+                <p>I've used Gazebo and C++ to simulate a LiDAR sensor, Open3D to generate the 3D geometry and THREE.js to visualize the 3D object in the browser.</p>
+                <a href="https://github.com/miguelfAndrade/mancala_game_iart" target="_blank"><h3>Mancala Game with AI <i class="fa fa-external-link-square"></i></h3></i></a>
+                <p>This game was a project in university which the objective was to create the mancala game and play it against an AI. This project is implemented in Python. In the future I'm thinking of adding an UI.</p>
+            </div>
+             <!-- Tags for additional content -->
+            <!-- <br/>
+            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
+            <div id="more-info" class="more-info">
+                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
+                <h1>HALOU!!!</h1>
+            </div> -->
+        </div>
+        <!-- <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
             <div class="info-section">
                 <h3>Junior Consultant</h3>
@@ -102,7 +121,7 @@
                     <p>Out 2018 - Jan 2022</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div id="studies" class="section">
             <h2 class="section-title">Education</h2>
             <div class="info-section">
@@ -178,34 +197,14 @@
                 <p>Intermediate</p>
             </div>
         </div>
-        <div id="personalProjects" class="section">
-            <h2 class="section-title">Personal Projects</h2>
-            <div class="info-section">
-                <a href="https://github.com/miguelfAndrade/miguel_andrade" target="_blank"><h3>This Website Project <i class="fa fa-external-link-square"></i></h3></i></a>
-                <p>The title is self-explanatory, this is the GitHub repository of this site.</p>
-                <a href="https://github.com/miguelfAndrade/web_interface_open3d" target="_blank"><h3>My Masters Thesis <i class="fa fa-external-link-square"></i></h3></i></a>
-                <p>The project of my masters thesis, Development of a 3D visualisation system for a robotic simulator. The idea here was to process a pointcloud from a robot and generate a 3D geometry from that same pointcloud. We can visualize and interact with this geometry through a graphical interface in the browser.</p>
-                <p>I've used Gazebo and C++ to simulate a LiDAR sensor, Open3D to generate the 3D geometry and THREE.js to visualize the 3D object in the browser</p>
-                <a href="https://github.com/miguelfAndrade/mancala_game_iart" target="_blank"><h3>Mancala Game with AI <i class="fa fa-external-link-square"></i></h3></i></a>
-                <p>This game was a project in university which the objective was to create the mancala game and play it against an AI. This project is implemented in Python. In the future I'm thinking of adding an UI.</p>
-            </div>
-             <!-- Tags for additional content -->
-            <!-- <br/>
-            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
-            <div id="more-info" class="more-info">
-                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
-                <h1>HALOU!!!</h1>
-            </div> -->
-        </div>
         <div id="main-menu" class="main-menu">
             <ul id="menu-list" class="menu-list">
                 <a href="#about"><li id="about-me-list" class="list-element" onclick="sectionClick('about-me')">About Me<span class="dot"></span></li></a>
-                <a href="#profissionalProjects"><li id="profissionalProjects-list" class="list-element" onclick="sectionClick('profissionalProjects')">Projects<span class="dot"></span></li></a>
                 <a href="#experience"><li id="experience-list" class="list-element" onclick="sectionClick('experience')">Experience<span class="dot"></span></li></a>
+                <a href="#personalProjects"><li id="personalProjects-list" class="list-element" onclick="sectionClick('personalProjects')">Personal Projects<span class="dot"></span></li></a>
                 <a href="#studies"><li id="studies-list" class="list-element" onclick="sectionClick('studies')">Education<span class="dot"></span></li></a>
                 <a href="#skills"><li id="skills-list" class="list-element" onclick="sectionClick('skills')">Skills<span class="dot"></span></li></a>
                 <a href="#languages"><li id="languages-list" class="list-element" onclick="sectionClick('languages')">Languages<span class="dot"></span></li></a>
-                <a href="#personalProjects"><li id="personalProjects-list" class="list-element" onclick="sectionClick('personalProjects')">Personal Projects<span class="dot"></span></li></a>
             </ul>
         </div>
         <div id="contacts-icons" class="contacts-icons">
@@ -213,6 +212,7 @@
                 <a id="github-link" href="https://github.com/miguelfAndrade" target="_blank" aria-label="My GitHub page"><li><i class="fa fa-github"></i></li></a>
                 <a id="mail-link" href="mailto:pro.mandrade@gmail.com" target="_blank" aria-label="My email address"><li><i class="fa fa-envelope"></i></li></a>
                 <a id="linkedin-link" href="https://www.linkedin.com/in/miguel-andrade-01090aa4/" target="_blank" aria-label="My LinkedIn profile"><li><i class="fa fa-linkedin-square"></i></li></a>
+                <a id="pdf-link" href="cv/CV_Miguel_Andrade_EN.pdf" target="_blank" label aria-label="Curriculum Vitae PDF"><li><i class="fa fa-id-card-o"></i></li></a>
             </div>
             <a id="contacts-button" class="contacts-button"><i class="fa fa-ellipsis-v"></i></a>
         </div>
