@@ -121,16 +121,16 @@ function activateSection(sectionId) {
     // else if(sectionId == 'experience') {
     //     document.documentElement.scrollTop = (sectionDivision)*(document.body.offsetHeight - window.innerHeight);
     // }
-    // else if(sectionId == 'studies') {
+    // else if(sectionId == 'personalProjects') {
     //     document.documentElement.scrollTop = (2*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
     // }
-    // else if(sectionId == 'skills') {
+    // else if(sectionId == 'studies') {
     //     document.documentElement.scrollTop = (3*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
     // }
-    // else if(sectionId == 'languages') {
+    // else if(sectionId == 'skills') {
     //     document.documentElement.scrollTop = (4*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
     // }
-    // else if(sectionId == 'personalProjects') {
+    // else if(sectionId == 'languages') {
     //     document.documentElement.scrollTop = (5*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
     // }
 
