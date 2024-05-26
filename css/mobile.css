@@ -141,6 +141,21 @@
         animation-play-state: initial;
         animation-fill-mode: forwards;
     }
+
+    .prev, .next {
+        position: initial;
+        display: none;
+    }
+
+    .proj-detail-mobile {
+        display: initial;
+    }
+
+    .mobile-info {
+        /* visibility: hidden; */
+        display: none;
+    }
+    
 }
 
 @media only screen and (max-width: 800px) {
@@ -154,3 +169,7 @@
         width: 50vw;
     }
 }
+
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
