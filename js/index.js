@@ -21,6 +21,8 @@ let showHideIcons = false;
 let sectionCurrentlyActive = 'about-me';
 let sectionLastActive = sectionCurrentlyActive;
 
+let scrollOffset = 50; // offset value for the scroll when the section is clicked
+
 window.onload = function() {
     ageText.innerHTML = calculateAge();
     document.body.style.setProperty('--body-height', ((allListElements.length * window.innerHeight) + 'px'));
@@ -51,7 +53,7 @@ window.onscroll = function(event) {scrollDynamic(event)}
 // The values are normalized to 1
 // There is a variable that changes value when scrolling and if that number is within a certain range for the section, that section is showed
 function scrollDynamic(event) {
-    event.preventDefault();
+    // event.preventDefault();
     scrollVar = document.documentElement.scrollTop / (document.body.scrollHeight - window.innerHeight);
         
     if(window.innerWidth <= mobileWidth) 
@@ -91,15 +93,27 @@ function seeSocialsIcons() {
     }
 }
 
-// Functions that handles the click in the section list
+// Function that handles the click in the section list
+// Also handles the scroll for when the section is clicked
 function sectionClick(id) {
     sectionLastActive = sectionCurrentlyActive;
     sectionCurrentlyActive = id;
     activateSection(sectionCurrentlyActive);
+    if (id !== "") {
+        for (let i = 0; i < allSections.length; i++) {
+            if(allSections.item(i).id == id) {
+                if(i == 0) document.documentElement.scrollTop = 0;
+                else if(i == (allSections.length-1)) document.documentElement.scrollTop = (allSections.length*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
+                else {
+                    document.documentElement.scrollTop = (i*sectionDivision)*(document.body.offsetHeight - window.innerHeight) + scrollOffset;
+                    break;
+                }
+            }
+        }
+    }
 }
 
 // Changes the appearence of the clicked section in the section list and shows the section in the website
-// TODO - change the scroll value to the correspondent area for the selected section
 function activateSection(sectionId) {
     resetDisplaySections('none');
     let elem = document.getElementById(sectionId);
@@ -115,27 +129,6 @@ function activateSection(sectionId) {
 
     elemList.classList.add("section-active");
     elemList.firstElementChild.classList.add("dot-active");
-    // if(sectionId == 'about-me') {
-    //     document.documentElement.scrollTop = 0;
-    // }
-    // else if(sectionId == 'experience') {
-    //     document.documentElement.scrollTop = (sectionDivision)*(document.body.offsetHeight - window.innerHeight);
-    // }
-    // else if(sectionId == 'personalProjects') {
-    //     document.documentElement.scrollTop = (2*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
-    // }
-    // else if(sectionId == 'studies') {
-    //     document.documentElement.scrollTop = (3*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
-    // }
-    // else if(sectionId == 'skills') {
-    //     document.documentElement.scrollTop = (4*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
-    // }
-    // else if(sectionId == 'languages') {
-    //     document.documentElement.scrollTop = (5*sectionDivision)*(document.body.offsetHeight - window.innerHeight);
-    // }
-
-    // console.log(scrollVar);
-    // console.log(document.documentElement.scrollTop);
 }
 
 // It is used to reset the css classes when scrolling or clicking in a different section
@@ -183,4 +176,32 @@ function calculateAge () {
     }
 
     return years;
+}
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide-exp");
+  let dots = document.getElementsByClassName("dot-section");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }

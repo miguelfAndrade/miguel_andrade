@@ -72,10 +72,6 @@ a:active {
     z-index: 20;
 }
 
-/* .more-info, div{
-    margin-top: 3%;
-} */
-
 .main-info {
     position: fixed;
     width: 100%;
@@ -232,4 +228,59 @@ a:active {
 
 .isolated-link:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.proj-info {
+    text-align: left;
+}
+
+.prev, .next {
+    display: initial;
+    cursor: pointer;
+    position: absolute;
+    top: 50vh;
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 50%;
+  }
+  
+  .next {
+    right: 20vw;
+  }
+  .prev {
+    left: 20vw;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: var(--color-list-hover-active);
+  }
+  
+  .dot-section {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--color-dot-active);
+    border-radius: 50%;
+    display: inline-block;
+    /* transition: background-color 0.6s ease; */
+  }
+  
+  .active, .dot-section:hover {
+    background-color: var(--color-list-hover-active);
+  }
+
+  .proj-detail-mobile {
+    display: none;
+}
+
+.mobile-info {
+    display: initial;
 }
