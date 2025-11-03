@@ -195,13 +195,13 @@ showSlides(slideIndex);
 function mobileSlides() {
     if(typeof experienceSection !== 'undefined') {
     let slides = document.getElementsByClassName("slide-exp");
-    experienceSection.addEventListener('touchstart', e => {
-            startX = e.touches[0].clientX;
+    experienceSection.addEventListener('touchstart', event => {
+            startX = event.touches[0].clientX;
         });
     
-        experienceSection.addEventListener('touchend', e => {
-            const endX = e.changedTouches[0].clientX;
-            if (startX - endX > 50 && slideIndex < slides.length - 1) {
+        experienceSection.addEventListener('touchend', event => {
+            const endX = event.changedTouches[0].clientX;
+            if (startX - endX > 50 && slideIndex < slides.length) {
                 plusSlides(1)
             } else if (endX - startX > 50 && slideIndex > 0) {
                 plusSlides(-1)
@@ -280,7 +280,7 @@ function fillInfoExperience(jsonData) {
         if(index % 2 == 1) {
             slideNumber++;
             slidesContainer += `
-                <div class="slide-exp" style="display: block;">
+                <div class="slide-exp page-sweep" style="display: block;">
                     ${allInfo}
                     <div class="mobile-info">
                         <a id="slide-${slideNumber}-link" class="more-info-link" onclick="seeMoreInfo('slide-${slideNumber}-link', 'slide-${slideNumber}-link-2', 'slide-${slideNumber}-info', true)">More information</a>
@@ -298,7 +298,7 @@ function fillInfoExperience(jsonData) {
         else if(index == jsonData.experience.length - 1) {
             slideNumber++;
             slidesContainer += `
-                <div class="slide-exp" style="display: block;">
+                <div class="slide-exp page-sweep" style="display: block;">
                     ${allInfo}
                     <div class="mobile-info">
                         <a id="slide-${slideNumber}-link" class="more-info-link" onclick="seeMoreInfo('slide-${slideNumber}-link', 'slide-${slideNumber}-link-2', 'slide-${slideNumber}-info', true)">More information</a>

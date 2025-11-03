@@ -284,3 +284,7 @@ a:active {
 .mobile-info {
     display: initial;
 }
+
+.page-sweep {
+    animation: fadeIn 1s linear 0s 1;
+}  
