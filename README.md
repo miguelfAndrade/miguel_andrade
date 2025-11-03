@@ -5,3 +5,5 @@
 - [ ] Add the colors of the CV for a more homogeneous style
 
 You can access it here: https://miguelfandrade.github.io/miguel_andrade/
+
+To run locally: `npx http-server -p 8000`

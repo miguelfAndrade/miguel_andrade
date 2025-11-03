@@ -1,0 +1,101 @@
+{
+  "experience": [
+    {
+      "companyName": "Critical Techworks",
+      "role": "Development Services, Data Engineering",
+      "techStack": ["AssemblyScript", "TypeScript", "C++"],
+      "details": [
+        "Developing scripts to retrieve data from BMW Group cars",
+        "Working with current pipelines to process data from the cars to an internal backend"
+      ],
+      "datePeriod": {
+        "start": "2024-11",
+        "end": "Present"
+      },
+      "usefulLinks": []
+    },
+    {
+      "companyName": "Banco de España",
+      "role": "Support and Development Services",
+      "techStack": [
+        "OpenText CEM OpenText Web Experience Management",
+        "Java",
+        "SQL"
+      ],
+      "details": [
+        "Developing new webpages and components for the client to the main website aswell to the internal sites",
+        "Adding new features to the WEM console such as content search tools supporting the colleagues workflow",
+        "Support tasks and answering to incidences tickets"
+      ],
+      "datePeriod": {
+        "start": "2024-02",
+        "end": "2024-10"
+      },
+      "usefulLinks": [
+        {
+          "label": "OpenText WEM",
+          "url": "https://www.opentext.com/about/brands/vignette"
+        }
+      ]
+    },
+    {
+      "companyName": "Bankinter",
+      "role": "Development Services",
+      "techStack": [
+        "OpenText CEM OpenText Web Experience Management",
+        "Java"
+      ],
+      "details": [
+        "Developed new website components and functionality for the client",
+        "Contributed to bug fixes related to the main website"
+      ],
+      "datePeriod": {
+        "start": "2023-08",
+        "end": "2024-02"
+      },
+      "usefulLinks": [
+        {
+          "label": "OpenText WEM",
+          "url": "https://www.opentext.com/about/brands/vignette"
+        }
+      ]
+    },
+    {
+      "companyName": "CaixaBank",
+      "role": "Proof of Concept for an ABanca website page",
+      "techStack": ["AEM", "Adobe Experience Manager"],
+      "details": [
+        "Developed a PoC (Proof of Concept) for the CaixaBank to demonstrate the capabilities of the AEM environment"
+      ],
+      "datePeriod": {
+        "start": "2023-06",
+        "end": "2023-07"
+      },
+      "usefulLinks": [
+        {
+          "label": "Adobe Experience Manager",
+          "url": "https://business.adobe.com/products/experience-manager/adobe-experience-manager.html"
+        }
+      ]
+    },
+    {
+      "companyName": "ABanca",
+      "role": "Development and maintenance of document models",
+      "techStack": ["OpenText", "CEM Exstream/StreamServe"],
+      "details": [
+        "Helped the team develop new documents for the client",
+        "Maintained and improved the existing documents for the client needs"
+      ],
+      "datePeriod": {
+        "start": "2022-02",
+        "end": "2022-11"
+      },
+      "usefulLinks": [
+        {
+          "label": "OpenText Exstream",
+          "url": "https://www.opentext.com/products/customer-communications-management"
+        }
+      ]
+    }
+  ]
+}

@@ -29,105 +29,13 @@
             <img id="img-perfil" src="img/Perfil_cc.webp" alt="profile picture" widt="500" height="500"/>
             <h2 class="section-title">Welcome to my page</h2>
             <div class="info-section">
-                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">27</span> years old Junior Consultant at VILT IBÉRICA and I'm currently living in Madrid, Spain.</p>
+                <p>Welcome to my personal website! My name is Miguel Andrade, I'm <span id="age">27</span> years old Software Developer at Critical Techworks.</p>
                 <p>My hometown is Vila das Aves, a town located in the north of Portugal, about 35Km from Porto and Braga.</p>
                 <p>Here you'll find detailed information about myself, from my academic education and experience to my personal projects that I try to do in my free time!</p>
             </div>
         </div>
         <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
-            <div class="slide-exp">
-                <div class="info-section">
-                    <h3>Banco de España</h3>
-                    <h4>Support and Development Services</h4>
-                    <div class="proj-detail-mobile">
-                        <ul class="proj-info">
-                            <li>Developing new webpages and components for the client to the main website aswell to the internal sites</li>
-                            <li>Adding new features to the WEM console such as content search tools supporting the colleagues workflow</li>
-                            <li>Support tasks and answering to incidences tickets</li>
-                        </ul>
-                    </div>
-                    <h5><a class="isolated-link" href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA, SQL</h5>
-                    <p>Feb 2024 - Present</p>
-                </div>
-                <div class="info-section">
-                    <h3>Bankinter</h3>
-                    <h4>Development Services</h4>
-                    <div class="proj-detail-mobile">
-                        <ul class="proj-info">
-                            <li>Developed new website components and functionality for the client</li>
-                            <li>Contributed to bug fixes related to the main website</li>
-                        </ul>
-                    </div>
-                    <h5><a class="isolated-link" href="https://www.opentext.com/about/brands/vignette" target="_blank">OpenText CEM</a> OpenText Web Experience Management, JAVA</h5>
-                    <p>Aug 2023 - Feb 2024</p>
-                </div>
-                <div class="mobile-info">
-                    <a id="slide-one-link" class="more-info-link" onclick="seeMoreInfo('slide-one-link', 'slide-one-link-2', 'slide-one-info', true)">More information</a>
-                    <a id="slide-one-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('slide-one-link', 'slide-one-link-2', 'slide-one-info', false)">Less information</a>
-                    <div id="slide-one-info" class="more-info">
-                        <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('slide-one-link', 'slide-one-link-2', 'slide-one-info', false)">&times;</a>
-                        <div class="more-info-section">
-                            <h3>Banco de España</h3>
-                            <ul class="proj-info">
-                                <li>Developing new webpages and components for the client to the main website aswell to the internal sites</li>
-                                <li>Adding new features to the WEM console such as content search tools supporting the colleagues workflow</li>
-                                <li>Support tasks and answering to incidences tickets</li>
-                            </ul>
-                        </div>
-                        <div class="more-info-section">
-                            <h3>Bankinter</h3>
-                            <ul class="proj-info">
-                                <li>Developed new website components and functionality for the client</li>
-                                <li>Contributed to bug fixes related to the main website</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-exp">
-                <div class="info-section">
-                    <h3>CaixaBank</h3>
-                    <h4>Proof of Concept for an ABanca website page</h4>
-                    <h5>Developed a PoC (Proof of Concept) for the CaixaBank to demonstrate the capabilities of the AEM environment
-                    </h5>
-                    <h5><a class="isolated-link" href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html" target="_blank">AEM</a> Adobe Experience Manager</h5>
-                    <p>Jun 2023 - Jul 2023</p>
-                </div>
-                <div class="info-section">
-                    <h3>ABanca</h3>
-                    <h4>Development and maintenance of documents models</h4>
-                    <div class="proj-detail-mobile">
-                        <ul class="proj-info">
-                            <li>Helped the team develop new documents for the client</li>
-                            <li>Maintained and improved the existing documents for the client needs</li>
-                        </ul>
-                    </div>
-                    <h5><a class="isolated-link" href="https://www.opentext.com/products/ccm-software" target="_blank">OpenText CEM</a> Exstream/StreamServe</h5>
-                    <p>Feb 2022 - Nov 2022</p>
-                </div>
-                <div class="mobile-info">
-                    <a id="slide-two-link" class="more-info-link" onclick="seeMoreInfo('slide-two-link', 'slide-two-link-2', 'slide-two-info', true)">More information</a>
-                    <a id="slide-two-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('slide-two-link', 'slide-two-link-2', 'slide-two-info', false)">Less information</a>
-                    <div id="slide-two-info" class="more-info">
-                        <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('slide-two-link', 'slide-two-link-2', 'slide-two-info', false)">&times;</a>
-                        <div class="more-info-section">
-                            <h3>ABanca</h3>
-                            <ul class="proj-info">
-                                <li>Helped the team develop new documents for the client</li>
-                                <li>Maintained and improved the existing documents for the client needs</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <br/>
-            <div class="bullets-dot">
-                <span class="dot-section" onclick="currentSlide(1)"></span>
-                <span class="dot-section" onclick="currentSlide(2)"></span>
-            </div>
         </div>
         <div id="personalProjects" class="section">
             <h2 class="section-title">Personal Projects</h2>
@@ -140,13 +48,6 @@
                 <a href="https://github.com/miguelfAndrade/mancala_game_iart" target="_blank"><h3>Mancala Game with AI <i class="fa fa-external-link-square"></i></h3></i></a>
                 <p>This game was a project in university which the objective was to create the mancala game and play it against an AI. This project is implemented in Python. In the future I'm thinking of adding an UI.</p>
             </div>
-             <!-- Tags for additional content -->
-            <!-- <br/>
-            <a class="more-info-link" onclick="seeMoreInfo(true)">More information</a>
-            <div id="more-info" class="more-info">
-                <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo(false)">&times;</a>
-                <h1>HALOU!!!</h1>
-            </div> -->
         </div>
         <div id="studies" class="section">
             <h2 class="section-title">Education</h2>
@@ -166,7 +67,7 @@
                 <p>2014 - 2017</p>
             </div>
             <!-- <a id="studies-link" class="more-info-link" onclick="seeMoreInfo('studies-info', true)">Certifications</a> -->
-            <a id="studies-link" class="more-info-link" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', true)">Certifications</a>
+            <!-- <a id="studies-link" class="more-info-link" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', true)">Certifications</a>
             <a id="studies-link-2" class="more-info-link more-info-link-2" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">Less information</a>
             <div id="studies-info" class="more-info">
                 <a id="more-info-close" class="more-info-close" onclick="seeMoreInfo('studies-link', 'studies-link-2', 'studies-info', false)">&times;</a>
@@ -176,7 +77,7 @@
                     <p>50QPYHV1KFEQ1YCX</p>
                     <p>Mar 2023 - Mar 2025</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="skills" class="section">
             <h2 class="section-title">Skills</h2>
