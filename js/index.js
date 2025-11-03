@@ -30,7 +30,7 @@ let slideIndex = 1;
 let startX = 0;
 
 window.onload = function() {
-    fetch('../data.json').then(response => response.json())
+    fetch('./data/data.json').then(response => response.json())
     .then(data => {
         fillInfoExperience(data);
         showSlides(slideIndex);
